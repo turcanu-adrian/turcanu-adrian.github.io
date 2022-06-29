@@ -1,0 +1,78 @@
+
+@font-face {
+	font-family: Couture;
+	src: url(couture-bld.otf);
+
+}
+
+
+* {
+	font-family: Couture;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+}
+
+body{
+	margin-left:auto;
+	margin-right:auto;
+	max-width:1000px;
+	background-color: darkgray;
+}
+
+h1 {
+	text-align:center;
+}
+
+.guess0, .guess1, .guess2, .guess3, .guess4 {
+	display: flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content:center;
+	align-items:center;
+	height:160px;
+}
+
+
+.team-block {
+	height:170px;
+	width:140px;
+	align-self:center;
+	justify-content:center;
+	text-align:center;
+	margin:auto;
+	background-color:Azure;
+	margin: 10px;
+}
+
+
+.text-block {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	height:170px;
+	text-align: center;
+	background-color:Azure;
+	margin: 10px;
+}
+
+
+
+
+
+
