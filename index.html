@@ -8,6 +8,7 @@
 <script src="players.js"></script>
 <div class="autocomplete"></div>
 <script src="autocomplete.js"></script>
+
 <script>//CREATE INPUT FIELD
 var input = document.createElement("INPUT");
 input.setAttribute("type", "text");
@@ -16,16 +17,22 @@ input.setAttribute("id", "inputbox");
 document.getElementsByClassName("autocomplete")[0].appendChild(input);
 var date = new Date();
 var day = (date.getDate()*date.getMonth()*date.getDay())%10;
-day=2;
+day=1;
 </script>
+
+
+<button onclick="showstats()">STATS</button>
+<div id="statscontainer" onclick="hidestats()" style="display:none;"><img src="background.png" alt="statsbackground" style="opacity:0.7;width: 100vw;max-height: 100vh;">
+<div id="statspage" onclick="event.stopPropagation()"><br>CLICK ANYWHERE TO HIDE STATS</div></div>
+
 <div class="maingame">
 <div class="guessesheader">
 <div class="guessesheader-cell">TEAM</div>
-<div class="guessesheader-cell">NAME</div>
+<div class="guessesheader-cell">REGION</div>
 <div class="guessesheader-cell">COUNTRY</div>
 <div class="guessesheader-cell">EARNINGS</div>
 <div class="guessesheader-cell">AGE</div>
-<div class="guessesheader-cell">REGION</div>
+<div class="guessesheader-cell">NAME</div>
 </div>
 <div class="guesses">
 <div class="guess0"></div><br>
@@ -36,5 +43,7 @@ day=2;
 </div>
 </div>
 <script src="script.js"></script>
+
+
 </body>
 </html>

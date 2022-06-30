@@ -1,6 +1,5 @@
 var maxguess = 5;	
 
-
 if (localStorage.version != 8){
 	localStorage.clear();
 	localStorage.version = 8;
@@ -9,6 +8,7 @@ if (localStorage.version != 8){
 if (localStorage.length == 1){
 	localStorage.guessIndex = 0;
 	localStorage.won="false";
+	localStorage.lost="false";
 	localStorage.day=day;
 	var guess = [];
 	localStorage.guess=JSON.stringify(guess);
@@ -23,6 +23,7 @@ else if (localStorage.savedpage != null)
 		localStorage.won = false;
 	}
 	
+//FADE IN ANIMATION
 function fadeIn(doc, index){
 	if (index<doc.getElementsByClassName("text-block").length) 
 		var element =  doc.getElementsByClassName("text-block")[index];
@@ -46,6 +47,8 @@ function fadeIn(doc, index){
 	
 }
 
+
+//SAVE PAGE IN LOCALSTORAGE
 function savepage()
 {
 	localStorage.savedpage = document.getElementsByClassName("guesses")[0].outerHTML;
@@ -53,8 +56,49 @@ function savepage()
 	localStorage.guess=JSON.stringify(guess);
 	document.getElementById("inputbox").disabled = false;
 	console.log("saved page");
+	if (localStorage.won == "true" || localStorage.lost == "true")
+		showstats();
 }
 
+//SHOW STATS PAGE
+function showstats()
+{
+	if (localStorage.won == "true")
+		document.getElementById("statspage").innerHTML = "<img src=\"https://prosettings.net/acd-cgi/img/v1/wp-content/uploads/" + players[day].name.toLowerCase()+ ".png\" id=\"statsimage\" style=\"max-width:300px;max-height:200px;width:auto;height:auto\"><br>YOU WON<br><button id=\"sharescore\" onclick=\"copyscore()\">SHARE MY SCORE</button>";
+	else if (localStorage.lost == "true")
+		document.getElementById("statspage").innerHTML = "<img src=\"defaultimage.png\" style=\"max-width:300px;max-height:200px;width:auto;height:auto\">YOU LOST";
+	else 
+		document.getElementById("statspage").innerHTML = "unknown";
+	document.getElementById("statscontainer").style.display = "block";
+}
+
+//COPY RESULTS TO CLIPBOARD
+function copyscore()
+{
+	var copyText = "VALARANTE 1 "+ localStorage.guessIndex +"/" + maxguess + "\n\n";
+	for (let i=0;i<localStorage.guessIndex;i++)
+	{
+		for (let j=0; j<6;j++)
+		{
+			if (document.getElementsByClassName("guess"+i)[0].getElementsByClassName("text-block")[j].style.backgroundColor == "rgb(83, 141, 78)")
+				copyText += "🟩";
+			else if (document.getElementsByClassName("guess"+i)[0].getElementsByClassName("text-block")[j].style.backgroundColor == "rgb(181, 159, 59)")
+				copyText += "🟨";
+			else
+				copyText+= "⬛";
+		}
+		copyText +="\n";
+	}
+	navigator.clipboard.writeText(copyText)
+}
+
+//HIDE STATS PAGE
+function hidestats()
+{
+	document.getElementById("statscontainer").style.display = "none";
+}
+
+	
 
 //CREATE AUTOCOMPLETE ARRAY
 var playernames = [];
@@ -63,95 +107,11 @@ for (var i = 0; i < players.length; i++)
 console.log(playernames);
 
 
-if (localStorage.getItem("won") == "false"){
+if (localStorage.won == "false" && localStorage.lost == "false"){
+	hidestats();
 	console.log("won = false");
 	guess = JSON.parse(localStorage.guess);
 	autocomplete(document.getElementById("inputbox"), playernames);
 }
-	/*input.addEventListener("keypress", function(event) {
-		if (event.key === "Enter"  && localStorage.won == "false" && localStorage.guessIndex < maxguess)
-					{
-				console.log("enter key pressed");
-				event.preventDefault();
-				var result = players.find(item => item.name.toUpperCase() === input.value.toUpperCase());
-				//console.log(result);
-				if (result != undefined) {
-					if (!guess.includes(input.value.toUpperCase())){
-						guess.push(input.value.toUpperCase());
-						document.getElementsByClassName("guess"+localStorage.guessIndex)[0].innerHTML = "<div class=\"text-block\"><img src=\"team-logos\\" + result.currentTeam + ".png\" alt=\"SENTINELS\" style=\"max-width:192px;max-height:108px;height:auto;width:auto;\"><p>" + result.currentTeam + "</p></div> <div class=\"text-block\">"+ result.name + "</div> <div class =\"text-block\">" + result.nationality + "</div> <div class=\"text-block\">" + result.earnings[0] + "<br>|<br>" + result.earnings[1] + "</div> <div class=\"text-block\">" + result.age + "</div> <div class=\"text-block\">" + result.region + "</div>";
-						
-						
-						//console.log(document.getElementsByClassName("guess"+localStorage.guessIndex)[0].getElementsByTagName("*"));
-						
-						
-						//WIN CONDITION
-						if (result.name == players[day].name)
-						{
-							document.getElementsByClassName("guess"+localStorage.guessIndex)[0].getElementsByTagName("*")[0].style.backgroundColor="LightGreen";
-							for (i=3; i<document.getElementsByClassName("guess"+localStorage.guessIndex)[0].getElementsByTagName("*").length;  i++){
-								document.getElementsByClassName("guess"+localStorage.guessIndex)[0].getElementsByTagName("*")[i].style.backgroundColor="LightGreen";
-							}
-							localStorage.won="true";
-							
-						}
-						
-						
-						//TEAM CHECK
-						if (result.currentTeam == players[day].currentTeam)
-							document.getElementsByClassName("guess"+localStorage.guessIndex)[0].getElementsByTagName("*")[0].style.backgroundColor="LightGreen";
-						else if (players[day].pastTeams.includes(result.currentTeam))
-							document.getElementsByClassName("guess"+localStorage.guessIndex)[0].getElementsByTagName("*")[0].style.backgroundColor="Yellow";
-						
-						
-						//COUNTRY CHECK
-						if (result.nationality == players[day].nationality)
-								document.getElementsByClassName("guess"+localStorage.guessIndex)[0].getElementsByTagName("*")[4].style.backgroundColor="LightGreen";
-						
-						
-						//REGION CHECK
-						if (result.region == players[day].region)
-							document.getElementsByClassName("guess"+localStorage.guessIndex)[0].getElementsByTagName("*")[9].style.backgroundColor="LightGreen";
-						
-						
-						//AGE CHECK
-						if (result.age == players[day].age)
-							document.getElementsByClassName("guess"+localStorage.guessIndex)[0].getElementsByTagName("*")[8].style.backgroundColor="LightGreen";
-						else if (Math.abs(result.age-players[day].age)<=2)
-								if ((result.age-players[day].age)>0)
-								{
-									document.getElementsByClassName("guess"+localStorage.guessIndex)[0].getElementsByTagName("*")[8].style.backgroundColor="Yellow";
-									document.getElementsByClassName("guess"+localStorage.guessIndex)[0].getElementsByTagName("*")[8].innerText+="\n▼";
-								}
-								else
-								{
-									document.getElementsByClassName("guess"+localStorage.guessIndex)[0].getElementsByTagName("*")[8].style.backgroundColor="Yellow";
-									document.getElementsByClassName("guess"+localStorage.guessIndex)[0].getElementsByTagName("*")[8].innerText+="\n▲";
-								}
-						
-						//EARNINGS CHECK 
-						if (result.earnings[0] == players[day].earnings[0])
-							document.getElementsByClassName("guess" + localStorage.guessIndex)[0].getElementsByTagName("*")[5].style.backgroundColor="LightGreen";
-						else if (result.earnings[0] == players[day].earnings[1])
-						{
-							document.getElementsByClassName("guess" + localStorage.guessIndex)[0].getElementByTagName("*")[5].style.backgroundColor="Yellow";
-							document.getElementsByClassName("guess" + localStorage.guessIndex)[0].getElementsByTagName("*")[5].innerText+="\n▼";
-						}
-							else
-							{
-								document.getElementsByClassName("guess" + localStorage.guessIndex)[0].getElementsByTagName("*")[5].style.backgroundColor="Yellow";
-								document.getElementsByClassName("guess"+localStorage.guessIndex)[0].getElementsByTagName("*")[5].innerText+="\n▲";
-							}
-						
-								
-						//SAVE PROGRESS
-						document.getElementById("inputbox").disabled = true;
-						fadeIn(document.getElementsByClassName("guess"+localStorage.guessIndex)[0],0);						
-					}
-				}
-				else
-					alert(input.value + " doesn't exist");
-			}
-	});
-}
-
-*/
+else
+	showstats();

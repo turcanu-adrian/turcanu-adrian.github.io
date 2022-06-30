@@ -42,7 +42,7 @@ function autocomplete(inp, arr) {
 					if (result != undefined) {
 						if (!guess.includes(input.value.toUpperCase())){
 							guess.push(input.value.toUpperCase());
-							document.getElementsByClassName("guess"+localStorage.guessIndex)[0].innerHTML = "<div class=\"text-block\"><img src=\"team-logos\\" + result.currentTeam + ".png\" alt=\"SENTINELS\" style=\"max-width:161px;max-height:90px;height:auto;width:auto;\"><p>" + result.currentTeam + "</p></div> <div class=\"text-block\">"+ result.fullname + "</div> <div class =\"text-block\">" + result.nationality + "</div> <div class=\"text-block\">" + result.earnings[0].toLocaleString('en-US', {style:'currency', currency:'USD', maximumFractionDigits: '0'}) + "<br>|<br>" + result.earnings[1].toLocaleString('en-US', {style:'currency', currency:'USD', maximumFractionDigits: '0'}) + "</div> <div class=\"text-block\">" + result.age + "</div> <div class=\"text-block\">" + result.region + "</div>";
+							document.getElementsByClassName("guess"+localStorage.guessIndex)[0].innerHTML = "<div class=\"text-block\"><img src=\"team-logos\\" + result.currentTeam + ".png\" alt=\"SENTINELS\" style=\"max-width:161px;max-height:90px;height:auto;width:auto;\"><p>" + result.currentTeam + "</p></div> <div class=\"text-block\">"+ result.region + "</div> <div class =\"text-block\">" + result.nationality + "</div> <div class=\"text-block\">" + result.earnings[0].toLocaleString('en-US', {style:'currency', currency:'USD', maximumFractionDigits: '0'}) + "<br>|<br>" + result.earnings[1].toLocaleString('en-US', {style:'currency', currency:'USD', maximumFractionDigits: '0'}) + "</div> <div class=\"text-block\">" + result.age + "</div> <div class=\"text-block\">" + result.fullname + "</div>";
 							
 							//WIN CONDITION
 							if (result.name == players[day].name)
@@ -52,7 +52,7 @@ function autocomplete(inp, arr) {
 									document.getElementsByClassName("guess"+localStorage.guessIndex)[0].getElementsByTagName("*")[i].style.backgroundColor="#538d4e";
 								}
 								localStorage.won="true";
-								
+								document.getElementById("inputbox").disabled = true;
 							}
 							
 							
@@ -70,7 +70,7 @@ function autocomplete(inp, arr) {
 							
 							//REGION CHECK
 							if (result.region == players[day].region)
-								document.getElementsByClassName("guess"+localStorage.guessIndex)[0].getElementsByTagName("*")[9].style.backgroundColor="#538d4e";
+								document.getElementsByClassName("guess"+localStorage.guessIndex)[0].getElementsByTagName("*")[3].style.backgroundColor="#538d4e";
 							
 							
 							//AGE CHECK
