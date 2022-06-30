@@ -30,6 +30,7 @@ body{
 	margin-right:auto;
 	max-width:1000px;
 	background-color: darkgray;
+	overflow:hidden;
 }
 
 h1 {
@@ -52,7 +53,7 @@ h1 {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	width: 100%;
+	min-width: 192px;
 	height:170px;
 	text-align: center;
 	background-color:Azure;

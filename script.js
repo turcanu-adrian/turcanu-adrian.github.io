@@ -1,8 +1,9 @@
 var maxguess = 5;	
 
-if (localStorage.version != 1){
+
+if (localStorage.version != 2){
 	localStorage.clear();
-	localStorage.version = 1;
+	localStorage.version = 2;
 }
 
 if (localStorage.length == 1){
@@ -64,7 +65,7 @@ if (localStorage.getItem("won") == "false"){
 				if (result != undefined) {
 					if (!guess.includes(input.value.toUpperCase())){
 						guess.push(input.value.toUpperCase());
-						document.getElementsByClassName("guess"+localStorage.guessIndex)[0].innerHTML = "<div class=\"text-block\"><img src=\"https://images.squarespace-cdn.com/content/v1/5aa9b09612b13f9aecc1613a/1594234324405-MIM5QUS4UOH0DFG83E4Y/Logo+Main+Red.png\" alt=\"SENTINELS\" style=\"width:192px;height:108px;\"><p>" + result.currentTeam + "</p></div> <div class=\"text-block\">"+ result.name + "</div> <div class =\"text-block\">" + result.nationality + "</div> <div class=\"text-block\">" + result.earnings[0] + "<br>|<br>" + result.earnings[1] + "</div> <div class=\"text-block\">" + result.age + "</div> <div class=\"text-block\">" + result.region + "</div>";
+						document.getElementsByClassName("guess"+localStorage.guessIndex)[0].innerHTML = "<div class=\"text-block\"><img src=\"team-logos\\" + result.currentTeam + ".png\" alt=\"SENTINELS\" style=\"max-width:192px;max-height:108px;height:auto;width:auto;\"><p>" + result.currentTeam + "</p></div> <div class=\"text-block\">"+ result.name + "</div> <div class =\"text-block\">" + result.nationality + "</div> <div class=\"text-block\">" + result.earnings[0] + "<br>|<br>" + result.earnings[1] + "</div> <div class=\"text-block\">" + result.age + "</div> <div class=\"text-block\">" + result.region + "</div>";
 						
 						
 						//console.log(document.getElementsByClassName("guess"+localStorage.guessIndex)[0].getElementsByTagName("*"));
