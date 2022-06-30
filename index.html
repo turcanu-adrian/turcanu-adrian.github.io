@@ -6,7 +6,6 @@
 <body>
 <h1>VALARANTE</h1>
 <script src="players.js"></script>
-
 <div class="autocomplete"></div>
 <script src="autocomplete.js"></script>
 <script>//CREATE INPUT FIELD
@@ -15,13 +14,18 @@ input.setAttribute("type", "text");
 input.setAttribute("autofocus","true");
 input.setAttribute("id", "inputbox");
 document.getElementsByClassName("autocomplete")[0].appendChild(input);
-
 var date = new Date();
 var day = (date.getDate()*date.getMonth()*date.getDay())%10;
 day=2;
 </script>
-
-<br><br>
+<div class="guessesheader">
+<div class="guessesheader-cell">TEAM</div>
+<div class="guessesheader-cell">NAME</div>
+<div class="guessesheader-cell">COUNTRY</div>
+<div class="guessesheader-cell">EARNINGS</div>
+<div class="guessesheader-cell">AGE</div>
+<div class="guessesheader-cell">REGION</div>
+</div>
 <div class="guesses">
 <div class="guess0"></div><br>
 <div class="guess1"></div><br>
