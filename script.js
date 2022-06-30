@@ -5,7 +5,7 @@ if (localStorage.version != 1){
 	localStorage.version = 1;
 }
 
-if (localStorage.length == 0){
+if (localStorage.length == 1){
 	localStorage.guessIndex = 0;
 	localStorage.won="false";
 	var guess = [];
