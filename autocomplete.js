@@ -120,8 +120,6 @@ function autocomplete(inp, arr) {
 						fadeIn(document.getElementsByClassName("guess"+localStorage.guessIndex)[0],0);						
 					}
 				}
-				else
-					alert(input.value + " doesn't exist");
 			}
 			else {
       var x = document.getElementById(this.id + "autocomplete-list");
