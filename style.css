@@ -83,6 +83,7 @@ h1 {
 	align-items:center;
 	height:130px;
 	opacity:1;
+	margin: 5px;
 }
 
 
@@ -95,9 +96,10 @@ h1 {
 	height:140px;
 	text-align: center;
 	background-color:#3a3a3c;
-	margin: 10px;
+	margin: 5px;
 	opacity:0;
-	padding: 3px 0 0 0;
+	padding: 12px 0 0 0;
+	word-spacing: 100px;
 }
 
 
