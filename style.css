@@ -13,10 +13,10 @@
 .autocomplete {
   /*the container must be positioned relative:*/
   position: relative;
-  display: inline-block;
+  display: 	block;
   margin-left:auto;
   margin-right:auto;
-  width:1000px;
+  width:500px;
 
 }
 input {
@@ -61,23 +61,7 @@ input[type=submit] {
 }
 /* AUTOCOMPLETE  END*/
 
-/*
-input {
-  border: 1px solid transparent;
-  background-color: #f1f1f1;
-  padding: 10px;
-  font-size: 16px;
-}
 
-input[type=text] {
-  background-color: #f1f1f1;
-  width: 100%;
-}
-input[type=submit] {
-  background-color: DodgerBlue;
-  color: #fff;
-}
-*/
 body{
 	margin-left:auto;
 	margin-right:auto;
@@ -96,7 +80,7 @@ h1 {
 	flex-wrap:nowrap;
 	justify-content:center;
 	align-items:center;
-	height:160px;
+	height:130px;
 	opacity:1;
 }
 
@@ -107,11 +91,12 @@ h1 {
 	justify-content: center;
 	flex-direction: column;
 	min-width: 150px;
-	height:170px;
+	height:140px;
 	text-align: center;
 	background-color:Azure;
 	margin: 10px;
 	opacity:0;
+	padding: 3px 0 0 0;
 }
 
 

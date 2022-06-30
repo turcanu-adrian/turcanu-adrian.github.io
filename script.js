@@ -9,12 +9,20 @@ if (localStorage.version != 4){
 if (localStorage.length == 1){
 	localStorage.guessIndex = 0;
 	localStorage.won="false";
+	localStorage.day=day;
 	var guess = [];
 	localStorage.guess=JSON.stringify(guess);
 }
-else if (localStorage.savedpage != null)	
-	document.getElementsByClassName("guesses")[0].outerHTML = localStorage.savedpage;
-
+else if (localStorage.savedpage != null)
+	if (day == localStorage.day)
+		document.getElementsByClassName("guesses")[0].outerHTML = localStorage.savedpage;
+	else 
+	{
+		localStorage.guessIndex = 0;
+		localStorage.savedpage = null;
+		localStorage.won = false;
+	}
+	
 function fadeIn(doc, index){
 	if (index<doc.getElementsByClassName("text-block").length) 
 		var element =  doc.getElementsByClassName("text-block")[index];
