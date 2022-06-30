@@ -1,5 +1,10 @@
 var maxguess = 5;	
 
+if (localStorage.version != 1){
+	localStorage.clear();
+	localStorage.version = 1;
+}
+
 if (localStorage.length == 0){
 	localStorage.guessIndex = 0;
 	localStorage.won="false";
