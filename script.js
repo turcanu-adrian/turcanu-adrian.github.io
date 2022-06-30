@@ -1,9 +1,9 @@
 var maxguess = 5;	
 
 
-if (localStorage.version != 7){
+if (localStorage.version != 8){
 	localStorage.clear();
-	localStorage.version = 7;
+	localStorage.version = 8;
 }
 
 if (localStorage.length == 1){
