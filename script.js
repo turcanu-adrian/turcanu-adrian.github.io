@@ -1,6 +1,5 @@
 var maxguess = 5;	
 
-//console.log(day);
 if (localStorage.length == 0){
 	localStorage.guessIndex = 0;
 	localStorage.won="false";
@@ -10,13 +9,11 @@ if (localStorage.length == 0){
 else if (localStorage.savedpage != null)	
 	document.getElementsByClassName("guesses")[0].outerHTML = localStorage.savedpage;
 
-function fadeIn(document, index){
-	if (index<document.getElementsByClassName("text-block").length) 
-		var element =  document.getElementsByClassName("text-block")[index];
+function fadeIn(doc, index){
+	if (index<doc.getElementsByClassName("text-block").length) 
+		var element =  doc.getElementsByClassName("text-block")[index];
 	else{
 		savepage();
-		localStorage.guessIndex++;			
-		localStorage.guess=JSON.stringify(guess);
 		return;
 	}
 	let opacity = 0;
@@ -24,7 +21,7 @@ function fadeIn(document, index){
 	let timer = setInterval(function() {
 		if (opacity > 1){
 			clearInterval(timer);
-			fadeIn(document, index+1);	
+			fadeIn(doc, index+1);	
 			}
 		else
 		{
@@ -38,6 +35,9 @@ function fadeIn(document, index){
 function savepage()
 {
 	localStorage.savedpage = document.getElementsByClassName("guesses")[0].outerHTML;
+	localStorage.guessIndex++;			
+	localStorage.guess=JSON.stringify(guess);
+	document.getElementById("inputbox").disabled = false;
 	console.log("saved page");
 }
 
@@ -126,8 +126,9 @@ if (localStorage.getItem("won") == "false"){
 								
 						//SAVE PROGRESS
 						//console.log("Saving progress")
-						
+						document.getElementById("inputbox").disabled = true;
 						fadeIn(document.getElementsByClassName("guess"+localStorage.guessIndex)[0],0);
+
 						
 					}
 				}
