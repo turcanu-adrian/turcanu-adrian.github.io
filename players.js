@@ -6,7 +6,8 @@ var players = [
 		"pastTeams":["CLOUD9"],
 		"age":21,
 		"earnings":[50000,100000],
-		"region":"NA"
+		"region":"NA",
+		"fullname": "Jason \"TenZ\" Ngo"
 	},
 	{
 		"name":"ShahZaM",
@@ -15,7 +16,8 @@ var players = [
 		"pastTeams":[],
 		"age": 29,
 		"earnings":[100000,150000],
-		"region":"NA"
+		"region":"NA",
+		"fullname": "Shahzeb \"ShahZaM\" Khan"
 	},
 	{
 		"name": "ScreaM",
@@ -24,7 +26,8 @@ var players = [
 		"pastTeams":["FISH123"],
 		"age": 27,
 		"earnings":[50000,100000],
-		"region":"EMEA"
+		"region":"EMEA",
+		"fullname": "Adil \"ScreaM\" Benrlitom"
 	},
 	
 	

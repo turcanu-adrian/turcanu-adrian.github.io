@@ -1,9 +1,9 @@
 var maxguess = 5;	
 
 
-if (localStorage.version != 4){
+if (localStorage.version != 5){
 	localStorage.clear();
-	localStorage.version = 4;
+	localStorage.version = 5;
 }
 
 if (localStorage.length == 1){
@@ -59,7 +59,7 @@ function savepage()
 //CREATE AUTOCOMPLETE ARRAY
 var playernames = [];
 for (var i = 0; i < players.length; i++)
-	playernames.push(players[i].name);
+	playernames.push(players[i].fullname);
 console.log(playernames);
 
 
