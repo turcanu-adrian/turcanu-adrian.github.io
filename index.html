@@ -4,16 +4,17 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="style.css"></head>
 <body>
-
 <h1>VALARANTE</h1>
 <script src="players.js"></script>
 
+<div class="autocomplete" style="width:300px;"></div>
+<script src="autocomplete.js"></script>
 <script>//CREATE INPUT FIELD
 var input = document.createElement("INPUT");
 input.setAttribute("type", "text");
 input.setAttribute("autofocus","true");
 input.setAttribute("id", "inputbox");
-document.body.appendChild(input);
+document.getElementsByClassName("autocomplete")[0].appendChild(input);
 
 var date = new Date();
 var day = (date.getDate()*date.getMonth()*date.getDay())%10;
