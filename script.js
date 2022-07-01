@@ -1,4 +1,4 @@
-var maxguess = 5;	
+var maxguess = 2;	
 
 if (localStorage.version != 9){
 	localStorage.clear();
@@ -6,9 +6,12 @@ if (localStorage.version != 9){
 }
 
 if (localStorage.length == 1){
+	localStorage.currentStreak = 0;
+	localStorage.maxStreak = 0;
+	localStorage.gamesplayed = 0;
+	localStorage.gameswon = 0;
 	localStorage.guessIndex = 0;
 	localStorage.won="false";
-	localStorage.lost="false";
 	localStorage.day=day;
 	var guess = [];
 	localStorage.guess=JSON.stringify(guess);
@@ -21,7 +24,7 @@ else if (localStorage.savedpage != null)
 		localStorage.guessIndex = 0;
 		localStorage.savedpage = null;
 		localStorage.won = false;
-		localStorage.lost = false;
+		localStorage.day = day;
 	}
 	
 //FADE IN ANIMATION
@@ -55,21 +58,35 @@ function savepage()
 	localStorage.savedpage = document.getElementsByClassName("guesses")[0].outerHTML;
 	localStorage.guessIndex++;			
 	localStorage.guess=JSON.stringify(guess);
-	document.getElementById("inputbox").disabled = false;
+	
 	console.log("saved page");
-	if (localStorage.won == "true" || localStorage.lost == "true")
+	if (localStorage.won == "true")
+		{
+		localStorage.currentStreak++;
+		if (localStorage.currentStreak>localStorage.maxStreak)
+				localStorage.maxStreak = localStorage.currentStreak;
+		localStorage.gamesplayed++;
 		showstats();
+		}
+	else if (localStorage.guessIndex==maxguess)
+	{
+		localStorage.currentStreak=0;
+		localStorage.gamesplayed++;
+		showstats();
+	}
+	else 
+		document.getElementById("inputbox").disabled = false;
 }
 
 //SHOW STATS PAGE
 function showstats()
 {
+	document.getElementById("statspage").innerHTML = "<img src=\"defaultimage.png\" style=\"max-width:300px;max-height:200px;width:auto;height:auto\"><br>STATS<br>";
 	if (localStorage.won == "true")
-		document.getElementById("statspage").innerHTML = "<img src=\"https://prosettings.net/acd-cgi/img/v1/wp-content/uploads/" + players[day].name.toLowerCase()+ ".png\" id=\"statsimage\" style=\"max-width:300px;max-height:200px;width:auto;height:auto\"><br>THE RIGHT ANSWER WAS<br>"+ players[day].fullname + "<br><button id=\"sharescore\" onclick=\"copyscore()\">SHARE MY SCORE</button>";
-	else if (localStorage.lost == "true")
-		document.getElementById("statspage").innerHTML = "<img src=\"defaultimage.png\" style=\"max-width:300px;max-height:200px;width:auto;height:auto\"><br>SORRY, THE RIGHT ANSWER WAS<br>"+ players[day].fullname + "<br><button id=\"sharescore\" onclick=\"copyscore()\">SHARE MY SCORE</button>";
-	else 
-		document.getElementById("statspage").innerHTML = "<img src=\"defaultimage.png\" style=\"max-width:300px;max-height:200px;width:auto;height:auto\"><br>STATS<br>";
+		document.getElementById("statspage").innerHTML = "<img src=\"https://prosettings.net/acd-cgi/img/v1/wp-content/uploads/" + players[day].name.toLowerCase()+ ".png\" id=\"statsimage\" style=\"max-width:300px;max-height:200px;width:auto;height:auto\"><br>THE RIGHT ANSWER WAS<br><p id=\"statsname\">"+ players[day].fullname + "</p><br><button id=\"sharescore\" onclick=\"copyscore()\">SHARE MY SCORE</button>	";
+	else if (localStorage.guessIndex==maxguess)
+		document.getElementById("statspage").innerHTML = "<img src=\"https://prosettings.net/acd-cgi/img/v1/wp-content/uploads/" + players[day].name.toLowerCase()+ ".png\" id=\"statsimage\" style=\"max-width:300px;max-height:200px;width:auto;height:auto\"><br>THE RIGHT ANSWER WAS<br><p id=\"statsname\">"+ players[day].fullname + "</p><br><button id=\"sharescore\" onclick=\"copyscore()\">SHARE MY SCORE</button>";
+	document.getElementById("statspage").innerHTML += "<p id=\"statstext\">GAMES PLAYED: " + localStorage.gamesplayed + "<br>GAMES WON: "+  localStorage.gameswon + "<br>CURRENT STREAK: "+localStorage.currentStreak + "<br>MAX STREAK: " + localStorage.maxStreak + "</p>";
 	document.getElementById("statscontainer").style.display = "block";
 }
 
@@ -81,9 +98,9 @@ function copyscore()
 	{
 		for (let j=0; j<6;j++)
 		{
-			if (document.getElementsByClassName("guess"+i)[0].getElementsByClassName("text-block")[j].style.backgroundColor == "rgb(83, 141, 78)")
+			if (document.getElementsByClassName("guess")[i].getElementsByClassName("text-block")[j].style.backgroundColor == "rgb(83, 141, 78)")
 				copyText += "🟩";
-			else if (document.getElementsByClassName("guess"+i)[0].getElementsByClassName("text-block")[j].style.backgroundColor == "rgb(181, 159, 59)")
+			else if (document.getElementsByClassName("guess")[i].getElementsByClassName("text-block")[j].style.backgroundColor == "rgb(181, 159, 59)")
 				copyText += "🟨";
 			else
 				copyText+= "⬛";
@@ -108,9 +125,8 @@ for (var i = 0; i < players.length; i++)
 console.log(playernames);
 
 
-if (localStorage.won == "false" && localStorage.lost == "false"){
+if (localStorage.won == "false" && localStorage.guessIndex<maxguess){
 	hidestats();
-	console.log("won = false");
 	guess = JSON.parse(localStorage.guess);
 	autocomplete(document.getElementById("inputbox"), playernames);
 }

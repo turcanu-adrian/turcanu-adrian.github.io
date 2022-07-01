@@ -121,7 +121,7 @@ h1 {
 	border-style: none none solid none;
 }
 
-.guess0, .guess1, .guess2, .guess3, .guess4 {
+.guess {
 	display: flex;
 	flex-direction:row;
 	flex-wrap:nowrap;
@@ -162,7 +162,6 @@ h1 {
 }
 
 #statspage {
-	 height: 50px;
     left: 50%;
     position: absolute;
     top: 50%;
@@ -174,4 +173,70 @@ h1 {
 	font-family: Helvetica85;	
 }
 
+#statsname {
+	
+	}
 
+#statsbutton {
+	position: relative;
+	right:140px;
+	font-size: 100%;
+	background-color: #121213;
+	color: white;
+	cursor:pointer;
+	border: none;
+}
+
+.guessesheader-cell .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: #3a3a3c;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 70%;
+  text-align: center;
+  word-spacing: normal;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom:90%;
+
+}
+
+.guessesheader-cell:hover .tooltiptext {
+  visibility: visible;
+}
+
+.help {
+	position: relative;
+	left: 140px;
+	font-size: 100%;
+	background-color: #121213;
+	color: white;
+	border: none;
+	font-family: Helvetica85;
+}
+
+
+.help .helptext {
+  visibility: hidden;
+  width: 400px;
+  background-color: #3a3a3c;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 50%;
+  text-align: center;
+  word-spacing: normal;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  left: 25px;
+}
+	
+.help:hover .helptext {
+  visibility: visible;
+}
