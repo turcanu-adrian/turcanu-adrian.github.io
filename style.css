@@ -69,6 +69,9 @@ input[type=submit] {
 /* AUTOCOMPLETE  END*/
 
 
+h1 {
+	font-family: Helvetica85;
+}
 body{
 	margin-left:auto;
 	margin-right:auto;
@@ -168,6 +171,7 @@ h1 {
 	height: 500px;
 	background-color: #121213;
 	text-align:center;
+	font-family: Helvetica85;	
 }
 
 

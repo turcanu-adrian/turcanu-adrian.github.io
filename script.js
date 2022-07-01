@@ -1,8 +1,8 @@
 var maxguess = 5;	
 
-if (localStorage.version != 8){
+if (localStorage.version != 9){
 	localStorage.clear();
-	localStorage.version = 8;
+	localStorage.version = 9;
 }
 
 if (localStorage.length == 1){
@@ -21,6 +21,7 @@ else if (localStorage.savedpage != null)
 		localStorage.guessIndex = 0;
 		localStorage.savedpage = null;
 		localStorage.won = false;
+		localStorage.lost = false;
 	}
 	
 //FADE IN ANIMATION
@@ -64,11 +65,11 @@ function savepage()
 function showstats()
 {
 	if (localStorage.won == "true")
-		document.getElementById("statspage").innerHTML = "<img src=\"https://prosettings.net/acd-cgi/img/v1/wp-content/uploads/" + players[day].name.toLowerCase()+ ".png\" id=\"statsimage\" style=\"max-width:300px;max-height:200px;width:auto;height:auto\"><br>YOU WON<br><button id=\"sharescore\" onclick=\"copyscore()\">SHARE MY SCORE</button>";
+		document.getElementById("statspage").innerHTML = "<img src=\"https://prosettings.net/acd-cgi/img/v1/wp-content/uploads/" + players[day].name.toLowerCase()+ ".png\" id=\"statsimage\" style=\"max-width:300px;max-height:200px;width:auto;height:auto\"><br>THE RIGHT ANSWER WAS<br>"+ players[day].fullname + "<br><button id=\"sharescore\" onclick=\"copyscore()\">SHARE MY SCORE</button>";
 	else if (localStorage.lost == "true")
-		document.getElementById("statspage").innerHTML = "<img src=\"defaultimage.png\" style=\"max-width:300px;max-height:200px;width:auto;height:auto\">YOU LOST";
+		document.getElementById("statspage").innerHTML = "<img src=\"defaultimage.png\" style=\"max-width:300px;max-height:200px;width:auto;height:auto\"><br>SORRY, THE RIGHT ANSWER WAS<br>"+ players[day].fullname + "<br><button id=\"sharescore\" onclick=\"copyscore()\">SHARE MY SCORE</button>";
 	else 
-		document.getElementById("statspage").innerHTML = "unknown";
+		document.getElementById("statspage").innerHTML = "<img src=\"defaultimage.png\" style=\"max-width:300px;max-height:200px;width:auto;height:auto\"><br>STATS<br>";
 	document.getElementById("statscontainer").style.display = "block";
 }
 
