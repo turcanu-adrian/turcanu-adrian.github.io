@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="style.css"></head>
-<body>
-
+<body><a href="https://discordapp.com/users/140721278695768064/" target="_blank">
+<img id="discord" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Discord_icon.svg" alt="discordimg"></a>
 <h1><button onclick="showstats()" id="statsbutton">🥇</button>VALARANTE<span class="help">?<span class="helptext">You can only guess 5 times.<br>Hover over each category for details.</span></span></h1>
 
 <script src="players.js"></script>
@@ -21,9 +21,6 @@ var date = new Date();
 var day =((date.getDate()*date.getMonth()*date.getDay())-1)%2 + 1;
 </script>
 
-
-
-
 <div id="statscontainer" onclick="hidestats()" style="display:none;"><img src="background.png" alt="statsbackground" style="opacity:0.7;width: 100vw;max-height: 100vh;">
 <div id="statspage" onclick="event.stopPropagation()"><br>CLICK ANYWHERE TO HIDE STATS</div></div>
 
@@ -36,13 +33,7 @@ var day =((date.getDate()*date.getMonth()*date.getDay())-1)%2 + 1;
 <div class="guessesheader-cell">AGE<span class="tooltiptext"><span style="color:#538d4e;">GREEN</span> = PLAYER IS THAT AGE<br><span style="color:#b59f3b;">YELLOW</span> = PLAYER'S AGE IS 2 YEARS CLOSE TO THAT AGE</span></span></div>
 <div class="guessesheader-cell">NAME<span class="tooltiptext"><span style="color:#538d4e;">GREEN</span> = YOU WON!</span></div>
 </div>
-<div class="guesses">
-<div class="guess"></div><br>
-<div class="guess"></div><br>
-<div class="guess"></div><br>
-<div class="guess"></div><br>
-<div class="guess"></div><br>
-</div>
+<div class="guesses"></div>
 </div>
 <script src="script.js"></script>
 

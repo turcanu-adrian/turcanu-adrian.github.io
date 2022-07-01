@@ -7,7 +7,8 @@ var players = [
 		"age":21,
 		"earnings":[50000,100000],
 		"region":"NA",
-		"fullname": "Jason \"TenZ\" Ngo"
+		"fullname": "Jason \"TenZ\" Ngo",
+		"pastRegions":[]
 	},
 	{
 		"name":"ShahZaM",
@@ -17,7 +18,8 @@ var players = [
 		"age": 29,
 		"earnings":[100000,150000],
 		"region":"NA",
-		"fullname": "Shahzeb \"ShahZaM\" Khan"
+		"fullname": "Shahzeb \"ShahZaM\" Khan",
+		"pastRegions":[]
 	},
 	{
 		"name": "ScreaM",
@@ -27,7 +29,8 @@ var players = [
 		"age": 27,
 		"earnings":[50000,100000],
 		"region":"EMEA",
-		"fullname": "Adil \"ScreaM\" Benrlitom"
+		"fullname": "Adil \"ScreaM\" Benrlitom",
+		"pastRegions":[]
 	},
 	
 	

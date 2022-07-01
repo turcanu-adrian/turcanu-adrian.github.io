@@ -240,3 +240,28 @@ h1 {
 .help:hover .helptext {
   visibility: visible;
 }
+
+a:link {
+	color: purple;
+}
+
+a:visited {
+	color:purple;
+}
+
+a:hover {
+	color: purple;
+}
+
+a:active {
+	color: purple;
+}
+
+
+#discord {
+	position:fixed;
+	bottom: 1em;
+	left:1em;
+	height:100px;
+	width:100px;
+}

@@ -108,6 +108,7 @@ function copyscore()
 		copyText +="\n";
 	}
 	navigator.clipboard.writeText(copyText)
+	alert("COPIED TO CLIPBOARD");
 }
 
 //HIDE STATS PAGE

@@ -42,14 +42,16 @@ function autocomplete(inp, arr) {
 					if (result != undefined) {
 						if (!guess.includes(input.value.toUpperCase())){
 							guess.push(input.value.toUpperCase());
-							document.getElementsByClassName("guess")[localStorage.guessIndex].innerHTML = "<div class=\"text-block\"><img src=\"team-logos\\" + result.currentTeam + ".png\" alt=\"SENTINELS\" style=\"max-width:161px;max-height:90px;height:auto;width:auto;\"><p>" + result.currentTeam + "</p></div> <div class=\"text-block\">"+ result.region + "</div> <div class =\"text-block\">" + result.nationality + "</div> <div class=\"text-block\">" + result.earnings[0].toLocaleString('en-US', {style:'currency', currency:'USD', maximumFractionDigits: '0'}) + "<br>|<br>" + result.earnings[1].toLocaleString('en-US', {style:'currency', currency:'USD', maximumFractionDigits: '0'}) + "</div> <div class=\"text-block\">" + result.age + "</div> <div class=\"text-block\">" + result.fullname + "</div>";
+							var guesselem = document.createElement("div");
+							guesselem.setAttribute("class", "guess");
+							guesselem.innerHTML = "<div class=\"text-block\"><img src=\"team-logos\\" + result.currentTeam + ".png\" alt=\"SENTINELS\" style=\"max-width:161px;max-height:90px;height:auto;width:auto;\"><p>" + result.currentTeam + "</p></div> <div class=\"text-block\">"+ result.region + "</div> <div class =\"text-block\">" + result.nationality + "</div> <div class=\"text-block\">" + result.earnings[0].toLocaleString('en-US', {style:'currency', currency:'USD', maximumFractionDigits: '0'}) + " | " + result.earnings[1].toLocaleString('en-US', {style:'currency', currency:'USD', maximumFractionDigits: '0'}) + "</div> <div class=\"text-block\">" + result.age + "</div> <div class=\"text-block\">" + result.fullname + "</div>";
 							
 							//WIN CONDITION
 							if (result.name == players[day].name)
 							{
-								document.getElementsByClassName("guess")[localStorage.guessIndex].getElementsByTagName("*")[0].style.backgroundColor="#538d4e";
-								for (i=3; i<document.getElementsByClassName("guess")[localStorage.guessIndex].getElementsByTagName("*").length;  i++){
-									document.getElementsByClassName("guess")[localStorage.guessIndex].getElementsByTagName("*")[i].style.backgroundColor="#538d4e";
+								
+								for (i=0; i<guesselem.getElementsByClassName("text-block").length;  i++){
+									guesselem.getElementsByClassName("text-block")[i].style.backgroundColor="#538d4e";
 								}
 								localStorage.won="true";
 								localStorage.gameswon++;
@@ -59,54 +61,60 @@ function autocomplete(inp, arr) {
 							
 							//TEAM CHECK
 							if (result.currentTeam == players[day].currentTeam)
-								document.getElementsByClassName("guess")[localStorage.guessIndex].getElementsByTagName("*")[0].style.backgroundColor="#538d4e";
+								guesselem.getElementsByClassName("text-block")[0].style.backgroundColor="#538d4e";
 							else if (players[day].pastTeams.includes(result.currentTeam))
-								document.getElementsByClassName("guess")[localStorage.guessIndex].getElementsByTagName("*")[0].style.backgroundColor="#b59f3b";
+								guesselem.getElementsByClassName("text-block")[0].style.backgroundColor="#b59f3b";
 							
 							
 							//COUNTRY CHECK
 							if (result.nationality == players[day].nationality)
-									document.getElementsByClassName("guess")[localStorage.guessIndex].getElementsByTagName("*")[4].style.backgroundColor="#538d4e";
+									guesselem.getElementsByClassName("text-block")[2].style.backgroundColor="#538d4e";
 							
 							
 							//REGION CHECK
 							if (result.region == players[day].region)
-								document.getElementsByClassName("guess")[localStorage.guessIndex].getElementsByTagName("*")[3].style.backgroundColor="#538d4e";
+								guesselem.getElementsByClassName("text-block")[1].style.backgroundColor="#538d4e";
+							else if (players[day].pastRegions.includes(result.region))
+								guesselem.getElementsByClassName("text-block")[1].style.backgroundColor="#b59f3b";
 							
 							
 							//AGE CHECK
 							if (result.age == players[day].age)
-								document.getElementsByClassName("guess")[localStorage.guessIndex].getElementsByTagName("*")[8].style.backgroundColor="#538d4e";
+								guesselem.getElementsByClassName("text-block")[4].style.backgroundColor="#538d4e";
 							else if (Math.abs(result.age-players[day].age)<=2)
 									if ((result.age-players[day].age)>0)
 									{
-										document.getElementsByClassName("guess")[localStorage.guessIndex].getElementsByTagName("*")[8].style.backgroundColor="#b59f3b";
-										document.getElementsByClassName("guess")[localStorage.guessIndex].getElementsByTagName("*")[8].innerText+="\n▼";
+										guesselem.getElementsByClassName("text-block")[4].style.backgroundColor="#b59f3b";
+										guesselem.getElementsByClassName("text-block")[4].innerText+="\n▼";
 									}
 									else
 									{
-										document.getElementsByClassName("guess")[localStorage.guessIndex].getElementsByTagName("*")[8].style.backgroundColor="#b59f3b";
-										document.getElementsByClassName("guess")[localStorage.guessIndex].getElementsByTagName("*")[8].innerText+="\n▲";
+										guesselem.getElementsByClassName("text-block")[4].style.backgroundColor="#b59f3b";
+										guesselem.getElementsByClassName("text-block")[4].innerText+="\n▲";
 									}
 							
 							//EARNINGS CHECK 
 							if (result.earnings[0] == players[day].earnings[0])
-								document.getElementsByClassName("guess")[localStorage.guessIndex].getElementsByTagName("*")[5].style.backgroundColor="#538d4e";
+								guesselem.getElementsByClassName("text-block")[3].style.backgroundColor="#538d4e";
 							else if (result.earnings[0] == players[day].earnings[1])
 							{
-								document.getElementsByClassName("guess" )[localStorage.guessIndex].getElementsByTagName("*")[5].style.backgroundColor="#b59f3b";
-								document.getElementsByClassName("guess" )[localStorage.guessIndex].getElementsByTagName("*")[5].innerText+="\n▼";
+								guesselem.getElementsByClassName("text-block")[3].style.backgroundColor="#b59f3b";
+								guesselem.getElementsByClassName("text-block")[3].innerText+="\n▼";
 							}
 								else
 								{
-									document.getElementsByClassName("guess" )[localStorage.guessIndex].getElementsByTagName("*")[5].style.backgroundColor="#b59f3b";
-									document.getElementsByClassName("guess")[localStorage.guessIndex].getElementsByTagName("*")[5].innerText+="\n▲";
+									guesselem.getElementsByClassName("text-block")[3].style.backgroundColor="#b59f3b";
+									guesselem.getElementsByClassName("text-block")[3].innerText+="\n▲";
 								}
-							
-									
-							//SAVE PROGRESS
+								
+								
+							document.getElementsByClassName("guesses")[0].appendChild(guesselem);	
+							document.getElementsByClassName("guesses")[0].innerHTML+="<br>";	
 							document.getElementById("inputbox").disabled = true;
-							fadeIn(document.getElementsByClassName("guess")[localStorage.guessIndex],0);						
+							fadeIn(document.getElementsByClassName("guess")[localStorage.guessIndex],0);							
+							//SAVE PROGRESS
+							
+						
 						}
 					}
 			}
