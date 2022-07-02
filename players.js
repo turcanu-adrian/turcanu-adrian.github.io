@@ -1,4 +1,4 @@
-[{
+var players =[{
         "fullname": "Finn \"karrigan\" Andersen",
         "name": "karrigan",
         "currentTeam": "FaZe",
