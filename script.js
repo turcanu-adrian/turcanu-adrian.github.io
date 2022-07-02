@@ -1,5 +1,8 @@
-var maxguess = 2;	
-
+var maxguess = 8;	
+var date = new Date();
+var day =((date.getDate()*date.getMonth()*date.getDay())-1)%2 + 1;
+day=0;
+	
 if (localStorage.version != 10){
 	localStorage.clear();
 	localStorage.version = 10;
@@ -124,6 +127,9 @@ var playernames = [];
 for (var i = 0; i < players.length; i++)
 	playernames.push(players[i].fullname);
 console.log(playernames);
+
+//CREATE TEAMS ARRAY WITH EXTENSION
+
 
 
 if (localStorage.won == "false" && localStorage.guessIndex<maxguess){

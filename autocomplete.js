@@ -38,13 +38,13 @@ function autocomplete(inp, arr) {
 					{
 						closeAllLists();
 					event.preventDefault();
-					var result = players.find(item => item.name.toUpperCase() === input.value.toUpperCase());
+					var result = players.find(item => item.name === input.value);
 					if (result != undefined) {
 						if (!guess.includes(input.value.toUpperCase())){
 							guess.push(input.value.toUpperCase());
 							var guesselem = document.createElement("div");
 							guesselem.setAttribute("class", "guess");
-							guesselem.innerHTML = "<div class=\"text-block\"><img src=\"team-logos\\" + result.currentTeam + ".png\" alt=\"SENTINELS\" style=\"max-width:161px;max-height:90px;height:auto;width:auto;\"><p>" + result.currentTeam + "</p></div> <div class=\"text-block\">"+ result.region + "</div> <div class =\"text-block\">" + result.nationality + "</div> <div class=\"text-block\">" + result.earnings[0].toLocaleString('en-US', {style:'currency', currency:'USD', maximumFractionDigits: '0'}) + " | " + result.earnings[1].toLocaleString('en-US', {style:'currency', currency:'USD', maximumFractionDigits: '0'}) + "</div> <div class=\"text-block\">" + result.age + "</div> <div class=\"text-block\">" + result.fullname + "</div>";
+							guesselem.innerHTML = "<div class=\"text-block\"><img src=\"team-logos\\" + result.currentTeam + ".png\" alt=\"SENTINELS\" style=\"max-width:161px;max-height:90px;height:auto;width:auto;\"><p>" + result.currentTeam + "</p></div> <div class=\"text-block\">"+ result.continent + "</div> <div class =\"text-block\">" + result.country + "</div> <div class=\"text-block\">" + result.earnings.toLocaleString('en-US', {style:'currency', currency:'USD', maximumFractionDigits: '0'})  + "</div> <div class=\"text-block\">" + result.age + "</div> <div class=\"text-block\">" + result.rating + "</div> <div class=\"text-block\">" + result.fullname + "</div>";
 							
 							//WIN CONDITION
 							if (result.name == players[day].name)
@@ -67,7 +67,7 @@ function autocomplete(inp, arr) {
 							
 							
 							//COUNTRY CHECK
-							if (result.nationality == players[day].nationality)
+							if (result.country == players[day].country)
 									guesselem.getElementsByClassName("text-block")[2].style.backgroundColor="#538d4e";
 							
 							
@@ -107,6 +107,9 @@ function autocomplete(inp, arr) {
 									guesselem.getElementsByClassName("text-block")[3].innerText+="\n▲";
 								}
 								
+								
+							//RATING checked
+							
 								
 							document.getElementsByClassName("guesses")[0].appendChild(guesselem);	
 							document.getElementsByClassName("guesses")[0].innerHTML+="<br>";	
