@@ -1,11 +1,11 @@
-var players = [{
+[{
         "fullname": "Finn \"karrigan\" Andersen",
         "name": "karrigan",
         "currentTeam": "FaZe",
         "country": "Denmark",
         "continent": "Europe",
         "age": 32,
-        "earnings": 0,
+        "earnings": 1269938,
         "rating": 0.95,
         "pastTeams": ["MOUZ", "Envy", "FaZe", "Astralis", "?", "TSM", "MOUZ", "CPH Wolves", "Reason", "n!faculty", "fnatic", "MOUZ"]
     }, {
@@ -15,7 +15,7 @@ var players = [{
         "country": "Norway",
         "continent": "Europe",
         "age": 27,
-        "earnings": 0,
+        "earnings": 1036116,
         "rating": 1.09,
         "pastTeams": ["G2", "Kinguin", "LGB", "London Conspiracy"]
     }, {
@@ -25,7 +25,7 @@ var players = [{
         "country": "Canada",
         "continent": "Americas",
         "age": 22,
-        "earnings": 0,
+        "earnings": 1135693,
         "rating": 1.12,
         "pastTeams": ["Liquid", "Misfits", "TSM", "AGG"]
     }, {
@@ -35,7 +35,7 @@ var players = [{
         "country": "Estonia",
         "continent": "Europe",
         "age": 22,
-        "earnings": 0,
+        "earnings": 767527,
         "rating": 1.12,
         "pastTeams": ["MOUZ"]
     }, {
@@ -45,7 +45,7 @@ var players = [{
         "country": "Latvia",
         "continent": "Europe",
         "age": 21,
-        "earnings": 0,
+        "earnings": 412832,
         "rating": 1.14,
         "pastTeams": ["Epsilon"]
     }, {
@@ -55,7 +55,7 @@ var players = [{
         "country": "Ukraine",
         "continent": "CIS",
         "age": 24,
-        "earnings": 0,
+        "earnings": 1616721,
         "rating": 1.33,
         "pastTeams": ["Liquid", "HellRaisers", "FlipSid3", "HellRaisers"]
     }, {
@@ -65,7 +65,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 23,
-        "earnings": 0,
+        "earnings": 1470458,
         "rating": 1.13,
         "pastTeams": ["FlipSid3", "NokSuKao", "Empire", "Rebels"]
     }, {
@@ -75,7 +75,7 @@ var players = [{
         "country": "Ukraine",
         "continent": "CIS",
         "age": 25,
-        "earnings": 0,
+        "earnings": 192155,
         "rating": 1.09,
         "pastTeams": ["ex-MAD Lions", "MAD Lions", "Spirit"]
     }, {
@@ -85,7 +85,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 22,
-        "earnings": 0,
+        "earnings": 1068370,
         "rating": 1.06,
         "pastTeams": ["Syman"]
     }, {
@@ -95,7 +95,7 @@ var players = [{
         "country": "Ukraine",
         "continent": "CIS",
         "age": 19,
-        "earnings": 0,
+        "earnings": 947324,
         "rating": 1.14,
         "pastTeams": ["NAVI Junior"]
     }, {
@@ -105,7 +105,7 @@ var players = [{
         "country": "Denmark",
         "continent": "Europe",
         "age": 32,
-        "earnings": 0,
+        "earnings": 251616,
         "rating": 0.95,
         "pastTeams": ["c0ntact", "Heroic", "OpTic", "Heroic", "X", "CPH Wolves", "No Problem!", "CPH Wolves", "Wikipediots"]
     }, {
@@ -115,7 +115,7 @@ var players = [{
         "country": "Montenegro",
         "continent": "Europe",
         "age": 23,
-        "earnings": 0,
+        "earnings": 130015,
         "rating": 1.05,
         "pastTeams": ["FunPlus Phoenix", "GODSENT", "SMASH", "BLUEJAYS", "Akopalipsa"]
     }, {
@@ -125,7 +125,7 @@ var players = [{
         "country": "Poland",
         "continent": "Europe",
         "age": 24,
-        "earnings": 0,
+        "earnings": 169929,
         "rating": 1.08,
         "pastTeams": ["Sprout", "Aristocracy", "devils.one"]
     }, {
@@ -135,7 +135,7 @@ var players = [{
         "country": "Poland",
         "continent": "Europe",
         "age": 22,
-        "earnings": 0,
+        "earnings": 99528,
         "rating": 1.03,
         "pastTeams": ["Wisla Krakow"]
     }, {
@@ -145,7 +145,7 @@ var players = [{
         "country": "Israel",
         "continent": "Africa \u0026 Middle East",
         "age": 21,
-        "earnings": 0,
+        "earnings": 100585,
         "rating": 1.15,
         "pastTeams": ["c0ntact", "Tikitakan"]
     }, {
@@ -155,7 +155,7 @@ var players = [{
         "country": "Kazakhstan",
         "continent": "CIS",
         "age": 28,
-        "earnings": 0,
+        "earnings": 686114,
         "rating": 1.07,
         "pastTeams": ["Players", "Gambit", "Gambit Youngsters", "Winstrike", "HellRaisers", "Gambit", "Tengri"]
     }, {
@@ -165,7 +165,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 21,
-        "earnings": 0,
+        "earnings": 495509,
         "rating": 0.96,
         "pastTeams": ["Players", "Gambit", "Gambit Youngsters"]
     }, {
@@ -175,7 +175,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 20,
-        "earnings": 0,
+        "earnings": 497263,
         "rating": 1.23,
         "pastTeams": ["Players", "Gambit", "Gambit Youngsters", "Gambit", "5balls"]
     }, {
@@ -185,7 +185,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 20,
-        "earnings": 0,
+        "earnings": 498067,
         "rating": 1.26,
         "pastTeams": ["Players", "Gambit", "Gambit Youngsters", "Vyalie Pitoni"]
     }, {
@@ -195,7 +195,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 21,
-        "earnings": 0,
+        "earnings": 498067,
         "rating": 1.04,
         "pastTeams": ["Players", "Gambit", "Gambit Youngsters", "Vyalie Pitoni"]
     }, {
@@ -205,7 +205,7 @@ var players = [{
         "country": "France",
         "continent": "Europe",
         "age": 29,
-        "earnings": 0,
+        "earnings": 987047,
         "rating": 0.96,
         "pastTeams": ["G2", "Envy", "Titan", "LDLC", "Clan-Mystik", "LDLC"]
     }, {
@@ -225,7 +225,7 @@ var players = [{
         "country": "Denmark",
         "continent": "Europe",
         "age": 24,
-        "earnings": 0,
+        "earnings": 1563490,
         "rating": 1.05,
         "pastTeams": ["Astralis", "OpTic", "North", "Dignitas", "SK"]
     }, {
@@ -235,7 +235,7 @@ var players = [{
         "country": "France",
         "continent": "Europe",
         "age": 21,
-        "earnings": 0,
+        "earnings": 498944,
         "rating": 1.26,
         "pastTeams": ["aAa", "WySix"]
     }, {
@@ -245,7 +245,7 @@ var players = [{
         "country": "France",
         "continent": "Europe",
         "age": 19,
-        "earnings": 0,
+        "earnings": 272835,
         "rating": 0.93,
         "pastTeams": []
     }, {
@@ -255,7 +255,7 @@ var players = [{
         "country": "France",
         "continent": "Europe",
         "age": 29,
-        "earnings": 0,
+        "earnings": 403329,
         "rating": 0.93,
         "pastTeams": ["3DMAX", "EnVyUs Academy", "beGenius"]
     }, {
@@ -265,7 +265,7 @@ var players = [{
         "country": "Bosnia and Herzegovina",
         "continent": "Europe",
         "age": 25,
-        "earnings": 0,
+        "earnings": 966591,
         "rating": 1.24,
         "pastTeams": ["FaZe", "MOUZ", "iNation"]
     }, {
@@ -275,7 +275,7 @@ var players = [{
         "country": "Bosnia and Herzegovina",
         "continent": "Europe",
         "age": 26,
-        "earnings": 0,
+        "earnings": 365100,
         "rating": 1.1,
         "pastTeams": ["CR4ZY", "Valiance", "Binary Dragons", "iNation"]
     }, {
@@ -285,7 +285,7 @@ var players = [{
         "country": "Finland",
         "continent": "Europe",
         "age": 25,
-        "earnings": 0,
+        "earnings": 374930,
         "rating": 0.94,
         "pastTeams": ["OG", "ENCE", "HAVU", "ENCORE", "ENCE", "SkitLite", "Recursive"]
     }, {
@@ -295,7 +295,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 17,
-        "earnings": 0,
+        "earnings": 66517,
         "rating": 1.11,
         "pastTeams": ["NAVI Junior"]
     }, {
@@ -305,7 +305,7 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 26,
-        "earnings": 0,
+        "earnings": 284973,
         "rating": 0.99,
         "pastTeams": ["INTZ", "IDM"]
     }, {
@@ -315,8 +315,8 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 22,
-        "earnings": 0,
-        "rating": 1.19,
+        "earnings": 282549,
+        "rating": 1.18,
         "pastTeams": []
     }, {
         "fullname": "Kaike \"KSCERATO\" Cerato",
@@ -325,7 +325,7 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 22,
-        "earnings": 0,
+        "earnings": 278862,
         "rating": 1.08,
         "pastTeams": []
     }, {
@@ -335,7 +335,7 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 27,
-        "earnings": 0,
+        "earnings": 61549,
         "rating": 1.02,
         "pastTeams": ["paiN"]
     }, {
@@ -345,7 +345,7 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 18,
-        "earnings": 0,
+        "earnings": 56860,
         "rating": 1.0,
         "pastTeams": ["FURIA Academy"]
     }, {
@@ -355,7 +355,7 @@ var players = [{
         "country": "Denmark",
         "continent": "Europe",
         "age": 26,
-        "earnings": 0,
+        "earnings": 230474,
         "rating": 0.98,
         "pastTeams": ["Complexity", "Cloud9", "Astralis", "Heroic", "Tricked", "Escape", "Epiphany Bolt"]
     }, {
@@ -365,7 +365,7 @@ var players = [{
         "country": "Sweden",
         "continent": "Europe",
         "age": 24,
-        "earnings": 0,
+        "earnings": 403151,
         "rating": 1.19,
         "pastTeams": ["Epsilon", "CG"]
     }, {
@@ -375,7 +375,7 @@ var players = [{
         "country": "Sweden",
         "continent": "Europe",
         "age": 23,
-        "earnings": 0,
+        "earnings": 180334,
         "rating": 1.0,
         "pastTeams": ["GamerLegion", "Uruguay", "Red Reserve", "GODSENT", "Red Reserve", "passions", "Epsilon Hype", "passions"]
     }, {
@@ -385,7 +385,7 @@ var players = [{
         "country": "Sweden",
         "continent": "Europe",
         "age": 20,
-        "earnings": 0,
+        "earnings": 311465,
         "rating": 1.15,
         "pastTeams": ["fnatic", "Red Reserve", "GODSENT", "passions"]
     }, {
@@ -395,7 +395,7 @@ var players = [{
         "country": "Sweden",
         "continent": "Europe",
         "age": 20,
-        "earnings": 0,
+        "earnings": 215200,
         "rating": 1.0,
         "pastTeams": ["Ancient", "x6tence Galaxy", "Singularity", "x6tence"]
     }, {
@@ -405,7 +405,7 @@ var players = [{
         "country": "Denmark",
         "continent": "Europe",
         "age": 27,
-        "earnings": 0,
+        "earnings": 377145,
         "rating": 1.1,
         "pastTeams": ["North", "Rogue", "undefined", "Rogue", "Preparation", "SK", "CPH Wolves"]
     }, {
@@ -415,7 +415,7 @@ var players = [{
         "country": "Denmark",
         "continent": "Europe",
         "age": 20,
-        "earnings": 0,
+        "earnings": 322037,
         "rating": 1.18,
         "pastTeams": ["ex-Fragsters", "Fragsters"]
     }, {
@@ -425,7 +425,7 @@ var players = [{
         "country": "Denmark",
         "continent": "Europe",
         "age": 21,
-        "earnings": 0,
+        "earnings": 303640,
         "rating": 1.08,
         "pastTeams": ["Copenhagen Flames", "OpTic", "Squared", "GoldenGitte", "Reason"]
     }, {
@@ -435,7 +435,7 @@ var players = [{
         "country": "Denmark",
         "continent": "Europe",
         "age": 23,
-        "earnings": 0,
+        "earnings": 380063,
         "rating": 1.06,
         "pastTeams": ["MAD Lions", "Tricked", "Squared"]
     }, {
@@ -445,7 +445,7 @@ var players = [{
         "country": "Denmark",
         "continent": "Europe",
         "age": 18,
-        "earnings": 0,
+        "earnings": 46292,
         "rating": 1.04,
         "pastTeams": ["Copenhagen Flames", "Singularity", "GoldenGitte"]
     }, {
@@ -455,7 +455,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 25,
-        "earnings": 0,
+        "earnings": 205376,
         "rating": 0.97,
         "pastTeams": ["Vega Squadron", "FLuffy Gangsters"]
     }, {
@@ -465,7 +465,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 19,
-        "earnings": 0,
+        "earnings": 145451,
         "rating": 1.12,
         "pastTeams": []
     }, {
@@ -475,7 +475,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 19,
-        "earnings": 0,
+        "earnings": 22015,
         "rating": 1.08,
         "pastTeams": ["Spirit Academy", "HaMoPeDe"]
     }, {
@@ -485,7 +485,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 18,
-        "earnings": 0,
+        "earnings": 136545216,
         "rating": 1.14,
         "pastTeams": ["Spirit Academy", "Spirit", "Espada"]
     }, {
@@ -495,7 +495,7 @@ var players = [{
         "country": "Ukraine",
         "continent": "CIS",
         "age": 17,
-        "earnings": 0,
+        "earnings": 6338,
         "rating": 0.0,
         "pastTeams": ["HellRaisers", "Gucci Squad", "Trasko", "Project X"]
     }, {
@@ -505,7 +505,7 @@ var players = [{
         "country": "Germany",
         "continent": "Europe",
         "age": 27,
-        "earnings": 0,
+        "earnings": 382552,
         "rating": 1.06,
         "pastTeams": ["NRG", "PENTA", "MOUZ", "n!faculty", "dotpiXels"]
     }, {
@@ -515,7 +515,7 @@ var players = [{
         "country": "Germany",
         "continent": "Europe",
         "age": 26,
-        "earnings": 0,
+        "earnings": 326644,
         "rating": 0.94,
         "pastTeams": ["ALTERNATE aTTaX", "KILLERFISH", "ALTERNATE aTTaX", "MOUZ", "ALTERNATE aTTaX", "dotpiXels"]
     }, {
@@ -525,7 +525,7 @@ var players = [{
         "country": "Germany",
         "continent": "Europe",
         "age": 26,
-        "earnings": 0,
+        "earnings": 297237,
         "rating": 1.15,
         "pastTeams": ["Sprout", "ALTERNATE aTTaX", "Planetkey"]
     }, {
@@ -535,7 +535,7 @@ var players = [{
         "country": "Germany",
         "continent": "Europe",
         "age": 22,
-        "earnings": 0,
+        "earnings": 162766,
         "rating": 1.04,
         "pastTeams": ["Sprout", "EURONICS", "DIVIZON"]
     }, {
@@ -545,7 +545,7 @@ var players = [{
         "country": "Germany",
         "continent": "Europe",
         "age": 19,
-        "earnings": 0,
+        "earnings": 63465,
         "rating": 1.03,
         "pastTeams": ["BIG Academy", "cowana", "ex-ALTERNATE aTTaX", "ALTERNATE aTTaX", "BIG Academy"]
     }, {
@@ -555,7 +555,7 @@ var players = [{
         "country": "Denmark",
         "continent": "Europe",
         "age": 26,
-        "earnings": 0,
+        "earnings": 1956650,
         "rating": 0.96,
         "pastTeams": ["?", "TSM", "Dignitas", "CPH Wolves", "fnatic", "Wikipediots", "Wikipediots"]
     }, {
@@ -565,7 +565,7 @@ var players = [{
         "country": "Denmark",
         "continent": "Europe",
         "age": 27,
-        "earnings": 0,
+        "earnings": 1812067,
         "rating": 0.94,
         "pastTeams": ["Heroic", "X", "CPH Wolves", "CPLAY", "CPH Wolves", "3DMAX", "Western Wolves", "Anexis"]
     }, {
@@ -575,7 +575,7 @@ var players = [{
         "country": "Denmark",
         "continent": "Europe",
         "age": 25,
-        "earnings": 0,
+        "earnings": 482605,
         "rating": 1.05,
         "pastTeams": ["Complexity", "OpTic", "North", "Dignitas", "SK", "Reason"]
     }, {
@@ -585,7 +585,7 @@ var players = [{
         "country": "Denmark",
         "continent": "Europe",
         "age": 23,
-        "earnings": 0,
+        "earnings": 79547,
         "rating": 1.02,
         "pastTeams": ["FunPlus Phoenix", "GODSENT", "Copenhagen Flames"]
     }, {
@@ -595,7 +595,7 @@ var players = [{
         "country": "Denmark",
         "continent": "Europe",
         "age": 25,
-        "earnings": 0,
+        "earnings": 225236,
         "rating": 1.28,
         "pastTeams": ["Complexity", "Heroic", "Epsilon", "Great Danes"]
     }, {
@@ -605,7 +605,7 @@ var players = [{
         "country": "Serbia",
         "continent": "Europe",
         "age": 25,
-        "earnings": 0,
+        "earnings": 371854,
         "rating": 1.01,
         "pastTeams": ["G2", "CR4ZY", "Valiance", "Imperial", "MANS NOT HOT", "Renegades", "iNation"]
     }, {
@@ -615,7 +615,7 @@ var players = [{
         "country": "Poland",
         "continent": "Europe",
         "age": 24,
-        "earnings": 0,
+        "earnings": 181570,
         "rating": 1.15,
         "pastTeams": ["ALTERNATE aTTaX", "PANTHERS"]
     }, {
@@ -625,7 +625,7 @@ var players = [{
         "country": "Czech Republic",
         "continent": "Europe",
         "age": 21,
-        "earnings": 0,
+        "earnings": 65557,
         "rating": 1.11,
         "pastTeams": ["SINNERS", "Universe"]
     }, {
@@ -635,7 +635,7 @@ var players = [{
         "country": "Israel",
         "continent": "Africa \u0026 Middle East",
         "age": 19,
-        "earnings": 0,
+        "earnings": 79501,
         "rating": 1.09,
         "pastTeams": ["Endpoint", "Aequus"]
     }, {
@@ -645,7 +645,7 @@ var players = [{
         "country": "Poland",
         "continent": "Europe",
         "age": 19,
-        "earnings": 0,
+        "earnings": 53066,
         "rating": 1.07,
         "pastTeams": ["AGO"]
     }, {
@@ -655,7 +655,7 @@ var players = [{
         "country": "United States",
         "continent": "Americas",
         "age": 26,
-        "earnings": 0,
+        "earnings": 977774,
         "rating": 0.94,
         "pastTeams": ["Liquid"]
     }, {
@@ -665,7 +665,7 @@ var players = [{
         "country": "Canada",
         "continent": "Americas",
         "age": 24,
-        "earnings": 0,
+        "earnings": 1092548,
         "rating": 1.22,
         "pastTeams": ["Renegades", "OpTic", "Conquest", "ELEVATE", "Luminosity"]
     }, {
@@ -675,7 +675,7 @@ var players = [{
         "country": "United States",
         "continent": "Americas",
         "age": 24,
-        "earnings": 0,
+        "earnings": 1042329,
         "rating": 1.16,
         "pastTeams": ["ELEVATE", "Justus Pro"]
     }, {
@@ -685,7 +685,7 @@ var players = [{
         "country": "United States",
         "continent": "Americas",
         "age": 23,
-        "earnings": 0,
+        "earnings": 113529,
         "rating": 1.09,
         "pastTeams": ["Extra Salt", "Cloud9", "ATK", "Singularity", "Gorilla Gang", "Etherian"]
     }, {
@@ -695,7 +695,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 21,
-        "earnings": 0,
+        "earnings": 169961,
         "rating": 1.09,
         "pastTeams": ["Virtus.pro", "forZe", "Quantum Bellator Fire"]
     }, {
@@ -705,7 +705,7 @@ var players = [{
         "country": "Kazakhstan",
         "continent": "CIS",
         "age": 23,
-        "earnings": 0,
+        "earnings": 406654,
         "rating": 1.06,
         "pastTeams": ["Virtus.pro", "AVANGAR", "LOG"]
     }, {
@@ -715,7 +715,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 23,
-        "earnings": 0,
+        "earnings": 404367,
         "rating": 1.08,
         "pastTeams": ["Virtus.pro", "AVANGAR"]
     }, {
@@ -725,7 +725,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 21,
-        "earnings": 0,
+        "earnings": 77422,
         "rating": 1.13,
         "pastTeams": ["K23", "Syman", "Winstrike", "WINside"]
     }, {
@@ -735,7 +735,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 19,
-        "earnings": 0,
+        "earnings": 136545216,
         "rating": 1.09,
         "pastTeams": ["K23", "SG.pro"]
     }, {
@@ -745,7 +745,7 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 32,
-        "earnings": 0,
+        "earnings": 432415,
         "rating": 0.88,
         "pastTeams": ["Last Dance", "Paquetá", "Imperial", "RED Canids", "Não Tem Como", "Immortals", "SK", "Luminosity", "Games Academy", "KaBuM.TD"]
     }, {
@@ -755,7 +755,7 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 31,
-        "earnings": 0,
+        "earnings": 1150590,
         "rating": 1.04,
         "pastTeams": ["Last Dance", "Liquid", "MIBR", "SK", "Luminosity", "Keyd", "KaBuM.TD"]
     }, {
@@ -765,7 +765,7 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 30,
-        "earnings": 0,
+        "earnings": 1070991,
         "rating": 1.14,
         "pastTeams": ["Last Dance", "00NATION", "Imperial", "MIBR", "SK", "Luminosity", "Keyd", "KaBuM.TD"]
     }, {
@@ -775,7 +775,7 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 25,
-        "earnings": 0,
+        "earnings": 400658,
         "rating": 1.12,
         "pastTeams": ["Last Dance", "MIBR", "BOOM", "INTZ", "Luminosity", "SK", "Immortals", "Tempo Storm", "Games Academy", "Luminosity", "Keyd", "KaBuM.TD"]
     }, {
@@ -785,7 +785,7 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 23,
-        "earnings": 0,
+        "earnings": 249938,
         "rating": 1.02,
         "pastTeams": ["Last Dance", "FURIA", "TShow"]
     }, {
@@ -795,7 +795,7 @@ var players = [{
         "country": "Australia",
         "continent": "Oceania",
         "age": 27,
-        "earnings": 0,
+        "earnings": 120818,
         "rating": 0.99,
         "pastTeams": ["Renegades", "Grayhound", "Tainted Minds", "Winterfox"]
     }, {
@@ -805,7 +805,7 @@ var players = [{
         "country": "Slovakia",
         "continent": "Europe",
         "age": 19,
-        "earnings": 0,
+        "earnings": 315631,
         "rating": 1.15,
         "pastTeams": ["NoChance", "GUNRUNNERS", "eXtatus", "nEophyte"]
     }, {
@@ -815,7 +815,7 @@ var players = [{
         "country": "Germany",
         "continent": "Europe",
         "age": 22,
-        "earnings": 0,
+        "earnings": 60365,
         "rating": 0.97,
         "pastTeams": ["MOUZ NXT", "Unicorns of Love", "expert", "PANTHERS"]
     }, {
@@ -825,7 +825,7 @@ var players = [{
         "country": "Hungary",
         "continent": "Europe",
         "age": 20,
-        "earnings": 0,
+        "earnings": 47151,
         "rating": 1.19,
         "pastTeams": ["MOUZ NXT", "Budapest Five", "Salamander", "GAMERZONE"]
     }, {
@@ -835,7 +835,7 @@ var players = [{
         "country": "Lithuania",
         "continent": "Europe",
         "age": 18,
-        "earnings": 0,
+        "earnings": 95310,
         "rating": 1.03,
         "pastTeams": ["FaZe"]
     }, {
@@ -845,7 +845,7 @@ var players = [{
         "country": "Spain",
         "continent": "Europe",
         "age": 26,
-        "earnings": 0,
+        "earnings": 288880,
         "rating": 1.1,
         "pastTeams": ["Giants", "Movistar Riders", "KPI", "k1ck", "Epsilon", "OverGaming"]
     }, {
@@ -855,7 +855,7 @@ var players = [{
         "country": "Spain",
         "continent": "Europe",
         "age": 25,
-        "earnings": 0,
+        "earnings": 66066,
         "rating": 1.0,
         "pastTeams": ["KPI"]
     }, {
@@ -875,7 +875,7 @@ var players = [{
         "country": "Spain",
         "continent": "Europe",
         "age": 23,
-        "earnings": 0,
+        "earnings": 25330,
         "rating": 1.14,
         "pastTeams": ["Iberian Family", "Caronte", "Miami Pitingos", "Wygers", "KPI"]
     }, {
@@ -885,7 +885,7 @@ var players = [{
         "country": "Spain",
         "continent": "Europe",
         "age": 21,
-        "earnings": 0,
+        "earnings": 26377,
         "rating": 0.88,
         "pastTeams": ["Iberian Family", "Caronte", "Miami Pitingos"]
     }, {
@@ -895,7 +895,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 24,
-        "earnings": 0,
+        "earnings": 159817,
         "rating": 0.99,
         "pastTeams": ["Spartak"]
     }, {
@@ -905,7 +905,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 24,
-        "earnings": 0,
+        "earnings": 69277,
         "rating": 1.1,
         "pastTeams": ["ex-ETHEREAL", "ETHEREAL", "Unique", "Atlants"]
     }, {
@@ -915,7 +915,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 20,
-        "earnings": 0,
+        "earnings": 136545216,
         "rating": 1.15,
         "pastTeams": ["Unique", "Dracarys"]
     }, {
@@ -925,7 +925,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 20,
-        "earnings": 0,
+        "earnings": 67103,
         "rating": 1.07,
         "pastTeams": ["ex-ETHEREAL", "ETHEREAL"]
     }, {
@@ -935,7 +935,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 21,
-        "earnings": 0,
+        "earnings": 136545216,
         "rating": 1.0,
         "pastTeams": ["Singularity", "BEZ ZP", "Trident", "VP.Prodigy"]
     }, {
@@ -945,7 +945,7 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 24,
-        "earnings": 0,
+        "earnings": 83040,
         "rating": 1.13,
         "pastTeams": ["BOOM", "INTZ", "Não Tem Como", "Luminosity", "paiN", "Innova"]
     }, {
@@ -955,7 +955,7 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 25,
-        "earnings": 0,
+        "earnings": 58635,
         "rating": 1.0,
         "pastTeams": ["Sharks", "Black Dragons", "ProGaming"]
     }, {
@@ -965,7 +965,7 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 23,
-        "earnings": 0,
+        "earnings": 43294909,
         "rating": 1.0,
         "pastTeams": ["Bravos", "W7M", "DETONA", "C4"]
     }, {
@@ -975,7 +975,7 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 24,
-        "earnings": 0,
+        "earnings": 30256,
         "rating": 1.14,
         "pastTeams": ["Bravos", "Keyd", "Santos"]
     }, {
@@ -985,7 +985,7 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 18,
-        "earnings": 0,
+        "earnings": 136545216,
         "rating": 1.08,
         "pastTeams": ["MIBR Academy", "PUGZEIROS"]
     }, {
@@ -995,7 +995,7 @@ var players = [{
         "country": "Switzerland",
         "continent": "Europe",
         "age": 22,
-        "earnings": 0,
+        "earnings": 45691,
         "rating": 1.07,
         "pastTeams": ["BLINK", "GAIJIN", "c0ntact", "m1x"]
     }, {
@@ -1005,7 +1005,7 @@ var players = [{
         "country": "Kosovo",
         "continent": "Europe",
         "age": 25,
-        "earnings": 0,
+        "earnings": 23605,
         "rating": 0.93,
         "pastTeams": ["BLINK"]
     }, {
@@ -1015,7 +1015,7 @@ var players = [{
         "country": "Kosovo",
         "continent": "Europe",
         "age": 25,
-        "earnings": 0,
+        "earnings": 43989,
         "rating": 1.07,
         "pastTeams": ["BLINK", "selectah", "Secret"]
     }, {
@@ -1025,7 +1025,7 @@ var players = [{
         "country": "Kosovo",
         "continent": "Europe",
         "age": 26,
-        "earnings": 0,
+        "earnings": 43537,
         "rating": 0.98,
         "pastTeams": ["BLINK", "Secret", "m1x"]
     }, {
@@ -1035,7 +1035,7 @@ var players = [{
         "country": "Kosovo",
         "continent": "Europe",
         "age": 23,
-        "earnings": 0,
+        "earnings": 26872,
         "rating": 1.03,
         "pastTeams": ["BLINK"]
     }, {
@@ -1045,7 +1045,7 @@ var players = [{
         "country": "Turkey",
         "continent": "Europe",
         "age": 26,
-        "earnings": 0,
+        "earnings": 394002,
         "rating": 1.22,
         "pastTeams": ["BIG", "ex-Space Soldiers", "Space Soldiers"]
     }, {
@@ -1055,7 +1055,7 @@ var players = [{
         "country": "Turkey",
         "continent": "Europe",
         "age": 23,
-        "earnings": 0,
+        "earnings": 320666,
         "rating": 1.1,
         "pastTeams": ["Cloud9", "MOUZ", "HellRaisers", "Gux \u0026 Friends", "ex-DarkPassage", "DarkPassage", "Deathtrap"]
     }, {
@@ -1065,7 +1065,7 @@ var players = [{
         "country": "Turkey",
         "continent": "Europe",
         "age": 23,
-        "earnings": 0,
+        "earnings": 168250,
         "rating": 1.0,
         "pastTeams": ["GORILLAZ", "Envy", "Windigo", "ex-Space Soldiers", "Space Soldiers", "DarkPassage", "Deathtrap"]
     }, {
@@ -1075,7 +1075,7 @@ var players = [{
         "country": "Turkey",
         "continent": "Europe",
         "age": 22,
-        "earnings": 0,
+        "earnings": 74802,
         "rating": 0.99,
         "pastTeams": ["Sangal", "Demolition Crew", "Demise", "Royal Bandits"]
     }, {
@@ -1085,7 +1085,7 @@ var players = [{
         "country": "Turkey",
         "continent": "Europe",
         "age": 19,
-        "earnings": 0,
+        "earnings": 21556,
         "rating": 0.98,
         "pastTeams": ["GORILLAZ", "9INE"]
     }, {
@@ -1095,7 +1095,7 @@ var players = [{
         "country": "Sweden",
         "continent": "Europe",
         "age": 27,
-        "earnings": 0,
+        "earnings": 283865,
         "rating": 1.03,
         "pastTeams": ["Savage", "Galaxy Racer", "MANS NOT HOT", "Lemondogs", "NIP", "fnatic", "Red Reserve", "GODSENT", "fnatic", "GODSENT", "Ancient", "DenDD", "1337", "Property", "FlipSid3", "LGB", "Lemondogs"]
     }, {
@@ -1105,7 +1105,7 @@ var players = [{
         "country": "Sweden",
         "continent": "Europe",
         "age": 24,
-        "earnings": 0,
+        "earnings": 72197,
         "rating": 1.07,
         "pastTeams": ["Savage", "Galaxy Racer", "Japaleno", "GamerLegion", "Chaos", "Japaleno", "Red Reserve", "Japaleno", "fnatic Academy"]
     }, {
@@ -1115,7 +1115,7 @@ var players = [{
         "country": "Sweden",
         "continent": "Europe",
         "age": 24,
-        "earnings": 0,
+        "earnings": 51900,
         "rating": 1.04,
         "pastTeams": ["X Gamer", "Apeks", "Lilmix", "Syman", "Epsilon"]
     }, {
@@ -1125,7 +1125,7 @@ var players = [{
         "country": "Israel",
         "continent": "Africa \u0026 Middle East",
         "age": 22,
-        "earnings": 0,
+        "earnings": 38482,
         "rating": 1.11,
         "pastTeams": ["Lyngby Vikings", "Finest", "HellRaisers", "Secret", "m1x"]
     }, {
@@ -1135,7 +1135,7 @@ var players = [{
         "country": "Estonia",
         "continent": "Europe",
         "age": 24,
-        "earnings": 0,
+        "earnings": 40088,
         "rating": 1.06,
         "pastTeams": ["Movistar Riders", "ex-SMASH", "SMASH", "WASD"]
     }, {
@@ -1145,7 +1145,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 26,
-        "earnings": 0,
+        "earnings": 191055,
         "rating": 1.15,
         "pastTeams": ["Spirit", "Gambit", "Vega Squadron", "Arcade", "Vega Squadron"]
     }, {
@@ -1155,7 +1155,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 24,
-        "earnings": 0,
+        "earnings": 109904,
         "rating": 1.03,
         "pastTeams": ["EPG Family", "ex-Winstrike", "Winstrike", "pro100", "Monolith", "EPG", "Spirit Academy", "RuSh3D"]
     }, {
@@ -1165,7 +1165,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 23,
-        "earnings": 0,
+        "earnings": 136545216,
         "rating": 1.02,
         "pastTeams": ["EPG Family", "ex-Winstrike", "Winstrike", "Hard Legion", "DreamEaters"]
     }, {
@@ -1175,7 +1175,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 22,
-        "earnings": 0,
+        "earnings": 100656,
         "rating": 1.06,
         "pastTeams": ["EPG Family", "ex-Winstrike", "Winstrike", "Monolith", "EPG"]
     }, {
@@ -1185,7 +1185,7 @@ var players = [{
         "country": "Russia",
         "continent": "CIS",
         "age": 22,
-        "earnings": 0,
+        "earnings": 109095,
         "rating": 1.08,
         "pastTeams": ["EPG Family", "ex-Winstrike", "Winstrike", "Hard Legion", "DreamEaters", "teamasd"]
     }, {
@@ -1195,7 +1195,7 @@ var players = [{
         "country": "Netherlands",
         "continent": "Europe",
         "age": 25,
-        "earnings": 0,
+        "earnings": 77216,
         "rating": 1.07,
         "pastTeams": ["Phoenix", "ex-Epsilon", "Epsilon", "Defusekids", "Splyce", "Infused"]
     }, {
@@ -1205,7 +1205,7 @@ var players = [{
         "country": "Denmark",
         "continent": "Europe",
         "age": 24,
-        "earnings": 0,
+        "earnings": 619725,
         "rating": 1.14,
         "pastTeams": ["HYENAS", "FaZe", "North", "Astralis", "Dignitas", "CPH Wolves"]
     }, {
@@ -1215,7 +1215,7 @@ var players = [{
         "country": "United Kingdom",
         "continent": "Europe",
         "age": 24,
-        "earnings": 0,
+        "earnings": 68899,
         "rating": 0.94,
         "pastTeams": ["Phoenix", "Endpoint", "FMESPORTS"]
     }, {
@@ -1225,7 +1225,7 @@ var players = [{
         "country": "United Kingdom",
         "continent": "Europe",
         "age": 26,
-        "earnings": 0,
+        "earnings": 90198,
         "rating": 0.96,
         "pastTeams": ["Phoenix", "ex-Epsilon", "Epsilon", "Complexity"]
     }, {
@@ -1235,7 +1235,7 @@ var players = [{
         "country": "Israel",
         "continent": "Africa \u0026 Middle East",
         "age": 22,
-        "earnings": 0,
+        "earnings": 6991,
         "rating": 1.19,
         "pastTeams": ["NOM", "Uniquestars", "Finest", "Finest", "Uniquestars"]
     }, {
@@ -1245,7 +1245,7 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 27,
-        "earnings": 0,
+        "earnings": 86498,
         "rating": 1.06,
         "pastTeams": ["Wild", "Virtue", "Luminosity"]
     }, {
@@ -1255,7 +1255,7 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 26,
-        "earnings": 0,
+        "earnings": 91708,
         "rating": 1.11,
         "pastTeams": ["Luminosity", "paiN"]
     }, {
@@ -1265,7 +1265,7 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 21,
-        "earnings": 0,
+        "earnings": 48672,
         "rating": 1.13,
         "pastTeams": ["DETONA"]
     }, {
@@ -1275,7 +1275,7 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 25,
-        "earnings": 0,
+        "earnings": 42923,
         "rating": 1.21,
         "pastTeams": []
     }, {
@@ -1285,7 +1285,7 @@ var players = [{
         "country": "Brazil",
         "continent": "Americas",
         "age": 24,
-        "earnings": 0,
+        "earnings": 136545216,
         "rating": 1.16,
         "pastTeams": ["Isurus", "Paquetá", "RED Canids"]
     }, {
@@ -1295,7 +1295,7 @@ var players = [{
         "country": "France",
         "continent": "Europe",
         "age": 26,
-        "earnings": 0,
+        "earnings": 79475,
         "rating": 1.19,
         "pastTeams": ["Akimbo", "LDLC", "Windigo", "FrenchFrogs", "ex-3DMAX", "3DMAX", "Imperial", "Envy", "EnVyUs Academy", "RANKS", "Vexed"]
     }, {
@@ -1305,7 +1305,7 @@ var players = [{
         "country": "France",
         "continent": "Europe",
         "age": 24,
-        "earnings": 0,
+        "earnings": 49365,
         "rating": 1.16,
         "pastTeams": ["Akimbo", "LDLC", "Heretics", "FrenchFrogs", "ex-3DMAX", "3DMAX", "NOBO", "Limitless"]
     }, {
@@ -1315,7 +1315,7 @@ var players = [{
         "country": "Belgium",
         "continent": "Europe",
         "age": 21,
-        "earnings": 0,
+        "earnings": 57870,
         "rating": 1.02,
         "pastTeams": ["Akimbo", "LDLC", "K23", "Syman"]
     }, {
@@ -1325,7 +1325,7 @@ var players = [{
         "country": "France",
         "continent": "Europe",
         "age": 20,
-        "earnings": 0,
+        "earnings": 136545216,
         "rating": 1.06,
         "pastTeams": ["Akimbo", "Unicorns of Love", "Heretics"]
     }, {
@@ -1335,7 +1335,7 @@ var players = [{
         "country": "France",
         "continent": "Europe",
         "age": 23,
-        "earnings": 0,
+        "earnings": 111953,
         "rating": 1.05,
         "pastTeams": ["Akimbo", "Vitality", "Warthox"]
     }, {
@@ -1345,7 +1345,7 @@ var players = [{
         "country": "France",
         "continent": "Europe",
         "age": 25,
-        "earnings": 0,
+        "earnings": 326989,
         "rating": 1.1,
         "pastTeams": ["DBL PONEY", "LDLC", "G2", "LDLC White"]
     }, {
@@ -1355,7 +1355,7 @@ var players = [{
         "country": "France",
         "continent": "Europe",
         "age": 24,
-        "earnings": 0,
+        "earnings": 132487,
         "rating": 1.05,
         "pastTeams": ["DBL PONEY", "Heretics", "G2", "3DMAX", "NOBO", "dizLown", "RANKS"]
     }, {
@@ -1365,7 +1365,7 @@ var players = [{
         "country": "France",
         "continent": "Europe",
         "age": 25,
-        "earnings": 0,
+        "earnings": 26141,
         "rating": 1.03,
         "pastTeams": ["DBL PONEY", "TheDice"]
     }, {
@@ -1375,7 +1375,7 @@ var players = [{
         "country": "France",
         "continent": "Europe",
         "age": 22,
-        "earnings": 0,
+        "earnings": 21640,
         "rating": 1.0,
         "pastTeams": ["DBL PONEY", "mYinsanity", "Red Instinct"]
     }, {
@@ -1385,7 +1385,7 @@ var players = [{
         "country": "France",
         "continent": "Europe",
         "age": 23,
-        "earnings": 0,
+        "earnings": 136545216,
         "rating": 1.11,
         "pastTeams": ["DBL PONEY", "LDLC"]
     }, {
@@ -1395,7 +1395,7 @@ var players = [{
         "country": "Romania",
         "continent": "Europe",
         "age": 21,
-        "earnings": 0,
+        "earnings": 27528,
         "rating": 1.09,
         "pastTeams": ["Nexus", "XPC"]
     }, {
@@ -1405,7 +1405,7 @@ var players = [{
         "country": "Netherlands",
         "continent": "Europe",
         "age": 26,
-        "earnings": 0,
+        "earnings": 49495,
         "rating": 1.22,
         "pastTeams": ["Lyngby Vikings", "Budapest Five", "Lyngby Vikings", "Defusekids", "Endpoint"]
     }, {
@@ -1415,7 +1415,7 @@ var players = [{
         "country": "Denmark",
         "continent": "Europe",
         "age": 24,
-        "earnings": 0,
+        "earnings": 42563,
         "rating": 0.98,
         "pastTeams": ["Lyngby Vikings", "Copenhagen Flames", "AGF", "Lyngby Vikings", "roughtimes"]
     }, {
@@ -1425,7 +1425,7 @@ var players = [{
         "country": "Denmark",
         "continent": "Europe",
         "age": 28,
-        "earnings": 0,
+        "earnings": 136545216,
         "rating": 0.99,
         "pastTeams": ["Lyngby Vikings"]
     }, {
@@ -1435,7 +1435,7 @@ var players = [{
         "country": "Denmark",
         "continent": "Europe",
         "age": 24,
-        "earnings": 0,
+        "earnings": 136545216,
         "rating": 1.03,
         "pastTeams": ["Lyngby Vikings", "Copenhagen Flames", "x6tence", "Copenhagen Flames"]
     }, {
@@ -1445,7 +1445,7 @@ var players = [{
         "country": "Bulgaria",
         "continent": "Europe",
         "age": 30,
-        "earnings": 0,
+        "earnings": 258977,
         "rating": 0.92,
         "pastTeams": ["Fiend", "VOYVODA", "MBAPPEEK", "ex-SMASH", "SMASH", "Windigo", "ex-Outlaws", "Imperial", "Rogue", "MK", "Orbit", "E-frag.net", "GPlay"]
     }, {
@@ -1455,7 +1455,7 @@ var players = [{
         "country": "Bulgaria",
         "continent": "Europe",
         "age": 25,
-        "earnings": 0,
+        "earnings": 71820,
         "rating": 1.03,
         "pastTeams": ["Fiend", "VOYVODA", "MBAPPEEK", "BLUEJAYS", "MK", "Imperial", "MK", "Orbit", "E-frag.net", "GPlay"]
     }, {
@@ -1465,7 +1465,7 @@ var players = [{
         "country": "Bulgaria",
         "continent": "Europe",
         "age": 21,
-        "earnings": 0,
+        "earnings": 263838,
         "rating": 1.11,
         "pastTeams": ["MBAPPEEK", "c0ntact", "CR4ZY", "Windigo", "ex-Outlaws", "Bpro"]
     }, {
@@ -1475,7 +1475,7 @@ var players = [{
         "country": "Bulgaria",
         "continent": "Europe",
         "age": 22,
-        "earnings": 0,
+        "earnings": 84022,
         "rating": 1.1,
         "pastTeams": ["Bpro"]
     }, {
@@ -1485,7 +1485,7 @@ var players = [{
         "country": "Bulgaria",
         "continent": "Europe",
         "age": 21,
-        "earnings": 0,
+        "earnings": 83973,
         "rating": 1.08,
         "pastTeams": ["FATE"]
     }
