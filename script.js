@@ -3,9 +3,9 @@ var date = new Date();
 var day =((date.getDate()*date.getMonth()*date.getDay())-1)%2 + 1;
 day=0;
 	
-if (localStorage.version != 10){
+if (localStorage.version != 11){
 	localStorage.clear();
-	localStorage.version = 10;
+	localStorage.version = 11;
 }
 
 if (localStorage.length == 1){
