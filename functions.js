@@ -50,19 +50,23 @@ function addGuess(localGuess){
 	//CURRENT TEAM BLOCK
 	text_block = document.createElement("div");
 	text_block.setAttribute("class", "text-block");
-	text_block.innerHTML="<img src=\"team-logos\\" + localGuess.currentTeam + ".png\" alt=\""+ localGuess.currentTeam + "\" style=\"min-height:80px;	max-width:161px;max-height:90px;height:auto;width:auto;\"><p>" + localGuess.currentTeam + "</p>";
-	if (localGuess.currentTeam == players[day].currentTeam)
-		text_block.style.backgroundColor="#538d4e";
+	text_block.innerHTML="<img src=\"team-logos\\" + localGuess.currentTeam + ".png\" alt=\""+ localGuess.currentTeam + "\" style=\"min-height:80px;	max-width:161px;max-height:90px;height:auto;width:auto;\">" + localGuess.currentTeam + "";
+	if (localGuess.currentTeam == players[day].currentTeam){
+		text_block.style.backgroundColor="#109856";
+		text_block.style.color = "white";
+	}
 	else if (players[day].pastTeams.includes(localGuess.currentTeam))
-		text_block.style.backgroundColor="#b59f3b";
+		text_block.style.backgroundColor="#e6f13d";
 	guess.appendChild(text_block);
 								
 	//CONTINENT BLOCK
 	text_block = document.createElement("div");
 	text_block.setAttribute("class", "text-block");
 	text_block.innerHTML=localGuess.continent;
-	if (localGuess.continent == players[day].continent)
-		text_block.style.backgroundColor="#538d4e";
+	if (localGuess.continent == players[day].continent){
+		text_block.style.backgroundColor="#109856";
+		text_block.style.color = "white";
+	}
 	guess.appendChild(text_block);
 	
 	
@@ -70,75 +74,89 @@ function addGuess(localGuess){
 	text_block = document.createElement("div");
 	text_block.setAttribute("class", "text-block");
 	text_block.innerHTML = localGuess.country;
-	if (localGuess.country == players[day].country)
-		text_block.style.backgroundColor="#538d4e";
+	if (localGuess.country == players[day].country){
+		text_block.style.backgroundColor="#109856";
+		text_block.style.color = "white";
+	}
 	guess.appendChild(text_block);
-	
 	
 	//EARNINGS BLOCK
 	text_block = document.createElement("div");
 	text_block.setAttribute("class", "text-block");
-	text_block.innerHTML = localGuess.earnings;
-	if (localGuess.earnings == players[day].earnings)
-		text_block.style.backgroundColor="#538d4e";
-	else if (Math.abs(localGuess.earnings - players[day].earnings)<=50000)
-		if (localGuess.earnings>players[day].earnings)
-	{
-		text_block.style.backgroundColor="#b59f3b";
-		text_block.innerText+="\n▼";
+	text_block.innerHTML = localGuess.earnings.toLocaleString('en-US', {style:'currency', currency:'USD', maximumFractionDigits: '0'});
+	if (localGuess.earnings == players[day].earnings){
+		text_block.style.backgroundColor="#109856";
+		text_block.style.color = "white";
 	}
+	else if (Math.abs(localGuess.earnings - players[day].earnings)<=50000){
+		if (localGuess.earnings>players[day].earnings)
+		{
+			text_block.style.backgroundColor="#e6f13d";
+			text_block.innerText+="\n▼";
+		}
 		else
 		{
-			text_block.style.backgroundColor="#b59f3b";
+			text_block.style.backgroundColor="#e6f13d";
 			text_block.innerText+="\n▲";
 		}
+	}
 	guess.appendChild(text_block);
 	
 	//AGE BLOCK
 	text_block = document.createElement("div");
 	text_block.setAttribute("class", "text-block");
 	text_block.innerHTML = localGuess.age;
-	if (localGuess.age == players[day].age)
-		text_block.style.backgroundColor="#538d4e";
-	else if (Math.abs(localGuess.age-players[day].age)<=2)
+	if (localGuess.age == players[day].age){
+		text_block.style.backgroundColor="#109856";
+		text_block.style.color = "white";
+	}
+	else if (Math.abs(localGuess.age-players[day].age)<=2){
 			if (localGuess.age>players[day].age)
 			{
-				text_block.style.backgroundColor="#b59f3b";
+				text_block.style.backgroundColor="#e6f13d";
 				text_block.innerText+="\n▼";
 			}
 			else
 			{
-				text_block.style.backgroundColor="#b59f3b";
+				text_block.style.backgroundColor="#e6f13d";
 				text_block.innerText+="\n▲";
 			}
+	}
 	guess.appendChild(text_block);
 	
 	//RATING BLOCK
 	text_block = document.createElement("div")
 	text_block.setAttribute("class", "text-block");
 	text_block.innerHTML = localGuess.rating;
-	if (localGuess.rating == players[day].rating)
-		text_block.style.backgroundColor="#538d4e";
-	else if (Math.abs(localGuess.rating - players[day].rating)<=0.05)
+	if (localGuess.rating == players[day].rating){
+		text_block.style.backgroundColor="#109856";
+		text_block.style.color = "white";
+	}
+	else if (Math.abs(localGuess.rating - players[day].rating)<=0.05){
 			if (localGuess.rating>players[day].rating)
 			{
-				text_block.style.backgroundColor="#b59f3b";
+				text_block.style.backgroundColor="#e6f13d";
 				text_block.innerText+="\n▼";
 			}
 			else
 			{
-				text_block.style.backgroundColor="#b59f3b";
+				text_block.style.backgroundColor="#e6f13d";
 				text_block.innerText+="\n▲";
 			}
+	}
 	guess.appendChild(text_block);
 	
 	//NAME BLOCK
 	text_block = document.createElement("div")
 	text_block.setAttribute("class", "text-block");
 	text_block.innerHTML=localGuess.fullname;
-	if (localGuess.name == players[day].name)
-		text_block.style.backgroundColor="#538d4e";
+	if (localGuess.name == players[day].name){
+		text_block.style.backgroundColor="#109856";
+		text_block.style.color = "white";
+	}	
 	guess.appendChild(text_block);
+	
+	guess.scrollIntoView();
 	
 }
 

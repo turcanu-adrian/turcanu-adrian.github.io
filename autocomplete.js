@@ -46,7 +46,7 @@ function autocomplete(inp, arr) {
 					event.preventDefault();
 					var result = players.find(item => item.name === input.value);
 					if (result != undefined) {
-						if (!JSON.stringify(guesses).includes(JSON.stringify(players[0]))){
+						if (!JSON.stringify(guesses).includes(JSON.stringify(result))){
 							console.log(guesses.includes(result));
 							guesses.push(result);
 							playernames.splice(playernames.indexOf(result.fullname), 1);

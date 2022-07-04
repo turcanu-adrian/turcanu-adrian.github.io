@@ -7,9 +7,10 @@
 
 h1 {
 	font-family: Helvetica85;
-	color: #5d79ae	;
+	color: #5d79ae;
 }
 body{
+    font-family: Helvetica85;
 	background-color:#f5f2ec;
 	color: #313131;	
 	margin: 0;
@@ -32,12 +33,26 @@ h1 {
 	font-family: Helvetica85;
 	font-size: 14px;
 	letter-spacing: 2px;
+	color: white;	
+}
+
+#bottom-bar {
+	display:flex;
+	background-color:#272e6f;
+	width:100%;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content:center;
+	align-content: center;
+	font-family: Helvetica85;
+	font-size: 14px;
+	letter-spacing: 2px;
 	color: white;
-	
 }
 
 #gametitle {
 	display: flex;
+	color:#edeae5;
 	width:max-content;
 	font-size: 300%;
 	align-items: center;
@@ -47,9 +62,12 @@ h1 {
 	margin-bottom:50px;
 	margin-left:auto;
 	margin-right:auto;
+	background: linear-gradient(to right, #272e6f 50%, #f99d1c 50%);
+	border-radius:20px;
+	border-style: solid;
 }
 .maingame {
-	width:1150px;
+	width:70%vw;
 	max-width:1000px;
 	letter-spacing: 1px;
 	margin-left:auto;

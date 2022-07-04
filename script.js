@@ -1,7 +1,7 @@
 var maxguess = 8;	
 var date = new Date();
-var day =((date.getDate()*date.getMonth()*date.getDay())-1)%2 + 1;
-day=0;
+var day =(date.getDate()*date.getMonth()*date.getDay())%players.length;
+day=4;
 	
 if (localStorage.version != 12){
 	localStorage.clear();
