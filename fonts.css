@@ -12,3 +12,8 @@
 	font-family: AkiraExpanded;
 	src: url(AkiraExpanded.otf);
 }
+
+@font-face {
+	font-family: CSRegular;
+	src: url(cs_regular.ttf);
+}

@@ -1,10 +1,10 @@
 .help {
-	position: relative;
-	left: 140px;
+	display:flex;
 	font-size: 100%;
-	color: #486da1;
 	border: none;
 	font-family: Helvetica85;
+	cursor: pointer;
+    padding: 20px 30px;
 }
 
 

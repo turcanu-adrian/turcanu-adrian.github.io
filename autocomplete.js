@@ -1,3 +1,9 @@
+var input = document.createElement("INPUT");
+input.setAttribute("type", "text");
+input.setAttribute("autofocus","true");
+input.setAttribute("id", "inputbox");
+document.getElementsByClassName("autocomplete")[0].appendChild(input);
+
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
@@ -34,17 +40,18 @@ function autocomplete(inp, arr) {
   });
   /*execute a function presses a key on the keyboard:*/
   inp.addEventListener("keydown", function(e) {
-	  if (event.key === "Enter"  && localStorage.won == "false" && localStorage.guessIndex < maxguess)
+	  if (event.key === "Enter"  && localStorage.won == "false" && guesses.length < maxguess)
 					{
 						closeAllLists();
 					event.preventDefault();
 					var result = players.find(item => item.name === input.value);
 					if (result != undefined) {
-						if (!guesses.includes(result)){
+						if (!JSON.stringify(guesses).includes(JSON.stringify(players[0]))){
+							console.log(guesses.includes(result));
 							guesses.push(result);
+							playernames.splice(playernames.indexOf(result.fullname), 1);
 							localStorage.guesses = JSON.stringify(guesses);
 							addGuess(result);
-							
 						}
 					}
 			}

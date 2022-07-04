@@ -38,7 +38,8 @@ for (let i=0;i<guesses.length;i++)
 //CREATE AUTOCOMPLETE ARRAY
 var playernames = [];
 for (var i = 0; i < players.length; i++)
-	playernames.push(players[i].fullname);
+	if (!JSON.stringify(guesses).includes(JSON.stringify(players[0])))
+		playernames.push(players[i].fullname);
 console.log(playernames);
 
 
