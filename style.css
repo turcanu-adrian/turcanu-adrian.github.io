@@ -7,14 +7,15 @@
 
 h1 {
 	font-family: Helvetica85;
+	color: #486da1;
 }
 body{
 	margin-left:auto;
 	margin-right:auto;
 	max-width:1000px;
-	background-color: #121213;
+	background-color: #f5f2ec;
 	overflow:hidden;
-	color: white;	
+	color: #313131;	
 	letter-spacing: 1px;
 }
 
