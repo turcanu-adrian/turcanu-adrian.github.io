@@ -71,7 +71,7 @@ function addGuess(localGuess){
 	text_block.setAttribute("class", "text-block");
 	text_block.innerHTML = localGuess.country;
 	if (localGuess.country == players[day].country)
-		guesselem.getElementsByClassName("text-block")[2].style.backgroundColor="#538d4e";
+		text_block.style.backgroundColor="#538d4e";
 	guess.appendChild(text_block);
 	
 	
