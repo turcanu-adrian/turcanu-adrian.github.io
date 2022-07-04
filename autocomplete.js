@@ -40,84 +40,11 @@ function autocomplete(inp, arr) {
 					event.preventDefault();
 					var result = players.find(item => item.name === input.value);
 					if (result != undefined) {
-						if (!guess.includes(input.value.toUpperCase())){
-							guess.push(input.value.toUpperCase());
-							var guesselem = document.createElement("div");
-							guesselem.setAttribute("class", "guess");
-							guesselem.innerHTML = "<div class=\"text-block\"><img src=\"team-logos\\" + result.currentTeam + ".png\" alt=\"SENTINELS\" style=\"max-width:161px;max-height:90px;height:auto;width:auto;\"><p>" + result.currentTeam + "</p></div> <div class=\"text-block\">"+ result.continent + "</div> <div class =\"text-block\">" + result.country + "</div> <div class=\"text-block\">" + result.earnings.toLocaleString('en-US', {style:'currency', currency:'USD', maximumFractionDigits: '0'})  + "</div> <div class=\"text-block\">" + result.age + "</div> <div class=\"text-block\">" + result.rating + "</div> <div class=\"text-block\">" + result.fullname + "</div>";
+						if (!guesses.includes(result)){
+							guesses.push(result);
+							localStorage.guesses = JSON.stringify(guesses);
+							addGuess(result);
 							
-							//WIN CONDITION
-							if (result.name == players[day].name)
-							{
-								
-								for (i=0; i<guesselem.getElementsByClassName("text-block").length;  i++){
-									guesselem.getElementsByClassName("text-block")[i].style.backgroundColor="#538d4e";
-								}
-								localStorage.won="true";
-								localStorage.gameswon++;
-								document.getElementById("inputbox").disabled = true;
-							}
-							
-							
-							//TEAM CHECK
-							if (result.currentTeam == players[day].currentTeam)
-								guesselem.getElementsByClassName("text-block")[0].style.backgroundColor="#538d4e";
-							else if (players[day].pastTeams.includes(result.currentTeam))
-								guesselem.getElementsByClassName("text-block")[0].style.backgroundColor="#b59f3b";
-							
-							
-							//COUNTRY CHECK
-							if (result.country == players[day].country)
-									guesselem.getElementsByClassName("text-block")[2].style.backgroundColor="#538d4e";
-							
-							
-							//REGION CHECK
-							if (result.region == players[day].region)
-								guesselem.getElementsByClassName("text-block")[1].style.backgroundColor="#538d4e";
-							else if (players[day].pastRegions.includes(result.region))
-								guesselem.getElementsByClassName("text-block")[1].style.backgroundColor="#b59f3b";
-							
-							
-							//AGE CHECK
-							if (result.age == players[day].age)
-								guesselem.getElementsByClassName("text-block")[4].style.backgroundColor="#538d4e";
-							else if (Math.abs(result.age-players[day].age)<=2)
-									if ((result.age-players[day].age)>0)
-									{
-										guesselem.getElementsByClassName("text-block")[4].style.backgroundColor="#b59f3b";
-										guesselem.getElementsByClassName("text-block")[4].innerText+="\n▼";
-									}
-									else
-									{
-										guesselem.getElementsByClassName("text-block")[4].style.backgroundColor="#b59f3b";
-										guesselem.getElementsByClassName("text-block")[4].innerText+="\n▲";
-									}
-							
-							//EARNINGS CHECK 
-							if (result.earnings[0] == players[day].earnings[0])
-								guesselem.getElementsByClassName("text-block")[3].style.backgroundColor="#538d4e";
-							else if (result.earnings[0] == players[day].earnings[1])
-							{
-								guesselem.getElementsByClassName("text-block")[3].style.backgroundColor="#b59f3b";
-								guesselem.getElementsByClassName("text-block")[3].innerText+="\n▼";
-							}
-								else
-								{
-									guesselem.getElementsByClassName("text-block")[3].style.backgroundColor="#b59f3b";
-									guesselem.getElementsByClassName("text-block")[3].innerText+="\n▲";
-								}
-								
-								
-							//RATING checked
-							
-								
-							document.getElementsByClassName("guesses")[0].appendChild(guesselem);	
-							document.getElementsByClassName("guesses")[0].innerHTML+="<br>";	
-							document.getElementById("inputbox").disabled = true;
-							fadeIn(document.getElementsByClassName("guess")[localStorage.guessIndex],0);							
-							//SAVE PROGRESS
-							
-						
 						}
 					}
 			}

@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
+<script src="functions.js"></script>
+<script src="players.js"></script>
+
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="style.css"></head>
-<body><a href="https://discordapp.com/users/140721278695768064/" target="_blank">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="https://discordapp.com/users/140721278695768064/" target="_blank">
 <img id="discord" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Discord_icon.svg" alt="discordimg"></a>
-<h1><button onclick="showstats()" id="statsbutton">🥇</button>CSGO ESPORTLE<span class="help">?<span class="helptext">You can only guess 5 times.<br>Hover over each category for details.</span></span></h1>
+<h1><button onclick="showstats()" id="statsbutton">🥇</button>CSGO ESPORTLE<span class="help">?<span class="helptext">You can only guess 5 times.<br>Hover over each category for details.
 
-<script src="players.js"></script>
+</span></span></h1>
+
 <div class="autocomplete"></div>
 <script src="autocomplete.js"></script>
 
@@ -20,10 +26,11 @@ document.getElementsByClassName("autocomplete")[0].appendChild(input);
 
 </script>
 
-<div id="statscontainer" onclick="hidestats()" style="display:none;"><img src="background.png" alt="statsbackground" style="opacity:0.7;width: 100vw;max-height: 100vh;">
+<div id="statscontainer" onclick="hidestats();" style="display:none;"><img src="background.png" alt="statsbackground" style="opacity:0.7;width: 100vw;max-height: 100vh;">
 <div id="statspage" onclick="event.stopPropagation()"><br>CLICK ANYWHERE TO HIDE STATS</div></div>
-<br>
+
 <div class="maingame">
+
 <div class="guessesheader">
 <div class="guessesheader-cell">TEAM<span class="tooltiptext"><span style="color:#538d4e;">GREEN</span> = PLAYER IS ACTIVE IN TEAM<br><span style="color:#b59f3b;">YELLOW</span> = PLAYER HAS BEEN ACTIVE IN TEAM</span></div>
 <div class="guessesheader-cell">REGION<span class="tooltiptext"><span style="color:#538d4e;">GREEN</span> = PLAYER IS ACTIVE IN REGION</span></div>
@@ -33,10 +40,8 @@ document.getElementsByClassName("autocomplete")[0].appendChild(input);
 <div class="guessesheader-cell">HLTV RATING<span class="tooltiptext"><span style="color:#538d4e;">GREEN</span> = EXACT RATING!</span></div>
 <div class="guessesheader-cell">NAME<span class="tooltiptext"><span style="color:#538d4e;">GREEN</span> = YOU WON!</span></div>
 </div>
-<div class="guesses"></div>
-</div>
+
+<div class="guesses"></div></div>
 <script src="script.js"></script>
-
-
 </body>
 </html>
