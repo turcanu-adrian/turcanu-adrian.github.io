@@ -15,18 +15,10 @@ if (localStorage.length == 1){
 	localStorage.maxStreak = 0;
 	localStorage.gamesplayed = 0;
 	localStorage.gameswon = 0;
-	localStorage.guessIndex = 0;
-	localStorage.won="false";
 	localStorage.day=day;
 }
-else if (localStorage.savedpage != null)
-	if (day == localStorage.day)
-		document.getElementsByClassName("guesses")[0].outerHTML = localStorage.savedpage;
-	else 
+else 
 	{
-		localStorage.guessIndex = 0;
-		localStorage.savedpage = null;
-		localStorage.won = false;
 		localStorage.day = day;
 	}
 
@@ -38,13 +30,9 @@ for (let i=0;i<guesses.length;i++)
 //CREATE AUTOCOMPLETE ARRAY
 var playernames = [];
 for (var i = 0; i < players.length; i++)
-	if (!JSON.stringify(guesses).includes(JSON.stringify(players[0])))
+	if (!JSON.stringify(guesses).includes(JSON.stringify(players[i])))
 		playernames.push(players[i].fullname);
 console.log(playernames);
 
+autocomplete(document.getElementById("inputbox"), playernames);
 
-if (localStorage.won == "false" && localStorage.guessIndex<maxguess){
-	autocomplete(document.getElementById("inputbox"), playernames);
-}
-else
-	showstats();

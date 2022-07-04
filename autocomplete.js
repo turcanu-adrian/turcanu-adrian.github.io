@@ -40,14 +40,13 @@ function autocomplete(inp, arr) {
   });
   /*execute a function presses a key on the keyboard:*/
   inp.addEventListener("keydown", function(e) {
-	  if (event.key === "Enter"  && localStorage.won == "false" && guesses.length < maxguess)
+	  if (event.key === "Enter")
 					{
-						closeAllLists();
+					closeAllLists();
 					event.preventDefault();
 					var result = players.find(item => item.name === input.value);
 					if (result != undefined) {
 						if (!JSON.stringify(guesses).includes(JSON.stringify(result))){
-							console.log(guesses.includes(result));
 							guesses.push(result);
 							playernames.splice(playernames.indexOf(result.fullname), 1);
 							localStorage.guesses = JSON.stringify(guesses);

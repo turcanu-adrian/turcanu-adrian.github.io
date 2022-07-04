@@ -50,7 +50,7 @@ function addGuess(localGuess){
 	//CURRENT TEAM BLOCK
 	text_block = document.createElement("div");
 	text_block.setAttribute("class", "text-block");
-	text_block.innerHTML="<img src=\"team-logos\\" + localGuess.currentTeam + ".png\" alt=\""+ localGuess.currentTeam + "\" style=\"min-height:80px;	max-width:161px;max-height:90px;height:auto;width:auto;\">" + localGuess.currentTeam + "";
+	text_block.innerHTML="<span style=\"line-height:43px;\"><img src=\"team-logos\\" + localGuess.currentTeam + ".png\" alt=\""+ localGuess.currentTeam + "\" style=\"max-width:43px;height:auto;width:auto;float:left;\">" + localGuess.currentTeam + "</span>";
 	if (localGuess.currentTeam == players[day].currentTeam){
 		text_block.style.backgroundColor="#109856";
 		text_block.style.color = "white";
@@ -157,6 +157,9 @@ function addGuess(localGuess){
 	guess.appendChild(text_block);
 	
 	guess.scrollIntoView();
+	
+	if (JSON.stringify(localGuess) == JSON.stringify(players[day])||guesses.length==maxguess)
+								document.getElementById("inputbox").disabled = true;
 	
 }
 

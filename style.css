@@ -37,8 +37,14 @@ h1 {
 }
 
 #bottom-bar {
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
 	display:flex;
 	background-color:#272e6f;
+	height:200px;
 	width:100%;
 	flex-direction:row;
 	flex-wrap:nowrap;
@@ -51,23 +57,28 @@ h1 {
 }
 
 #gametitle {
+	width: 300px;
+	margin-left:auto;
+	margin-right:auto;
 	display: flex;
-	color:#edeae5;
-	width:max-content;
+	color:white;
 	font-size: 300%;
 	align-items: center;
 	justify-content: center;
 	font-family: Helvetica85;
 	margin-top:50px;
 	margin-bottom:50px;
-	margin-left:auto;
-	margin-right:auto;
-	background: linear-gradient(to right, #272e6f 50%, #f99d1c 50%);
-	border-radius:20px;
-	border-style: solid;
+	border-radius: 15px;
+	letter-spacing: 2px;	
+	border: 3px solid;
+	box-shadow: 0 0 10px black;		
+	background: linear-gradient(to right, #272e6f 50% , #f99d1c 50%);
 }
+
+
 .maingame {
-	width:70%vw;
+	width:70%;
+	min-width:900px;
 	letter-spacing: 1px;
 	margin-left:auto;
 	margin-right:auto;	
